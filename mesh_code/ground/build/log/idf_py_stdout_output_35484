@@ -1,0 +1,140 @@
+Command: /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/blakecourtney/Documents/EE496/mesh_code/ground/build/ground.elf /Users/blakecourtney/Documents/EE496/mesh_code/ground/build/bootloader/bootloader.elf -m '/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/blakecourtney/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 27 2026 21:55:51[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=21924h (137508) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0003194c vaddr=3ffb0000 size=03e98h ( 16024) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=000357ec vaddr=40080000 size=0a82ch ( 43052) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4dc4h (675268) map[0m
+[0;32mI (387) esp_image: segment 4: paddr=000e4dec vaddr=4008a82c size=0c564h ( 50532) load[0m
+[0;32mI (407) esp_image: segment 5: paddr=000f1358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (419) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (419) boot: Disabling RNG early entropy source...[0m
+[0;32mI (429) cpu_start: Multicore app[0m
+[0;32mI (437) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (438) cpu_start: Pro cpu start user code[0m
+[0;32mI (438) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (439) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     ground[0m
+[0;32mI (447) app_init: App version:      82844f9-dirty[0m
+[0;32mI (451) app_init: Compile time:     Apr 28 2026 19:45:48[0m
+[0;32mI (457) app_init: ELF file SHA256:  c3c78921a...[0m
+[0;32mI (461) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (465) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (468) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (472) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (477) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (483) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (488) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (498) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 40096D90 len 00009270 (36 KiB): IRAM[0m
+[0;32mI (510) spi_flash: detected chip: generic[0m
+[0;32mI (513) spi_flash: flash io: dio[0m
+[0;33mW (516) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (529) main_task: Started on CPU0[0m
+[0;32mI (539) main_task: Calling app_main()[0m
+[0;32mI (589) wifi:wifi driver task: 3ffc1a4c, prio:23, stack:6656, core=0[0m
+[0;32mI (599) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (599) wifi:wifi certification version: v7.0[0m
+[0;32mI (599) wifi:config NVS flash: enabled[0m
+[0;32mI (599) wifi:config nano formatting: disabled[0m
+[0;32mI (609) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (609) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (619) wifi:Init management short buffer num: 32[0m
+[0;32mI (619) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (629) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (629) wifi:Init static rx buffer num: 10[0m
+[0;32mI (629) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi_init: rx ba win: 6[0m
+[0;32mI (639) wifi_init: accept mbox: 6[0m
+[0;32mI (639) wifi_init: tcpip mbox: 32[0m
+[0;32mI (649) wifi_init: udp mbox: 6[0m
+[0;32mI (649) wifi_init: tcp mbox: 6[0m
+[0;32mI (649) wifi_init: tcp tx win: 5760[0m
+[0;32mI (659) wifi_init: tcp rx win: 5760[0m
+[0;32mI (659) wifi_init: tcp mss: 1440[0m
+[0;32mI (659) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (659) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (669) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (749) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;32mI (749) wifi:enable tsf[0m
+[0;32mI (749) wifi:Total power save buffer number: 16[0m
+[0;32mI (749) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (759) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (759) mesh: <nvs>read layer:0[0m
+[0;32mI (759) mesh: <nvs>read assoc:0[0m
+[0;32mI (769) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (769) mesh_main: LEDs initialized[0m
+[0;32mI (769) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (789) wifi:Total power save buffer number: 16[0m
+[0;32mI (1049) mesh_main: GUI UART initialized[0m
+[0;32mI (1049) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1069) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1069) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;33mW (1069) mesh_main: GROUND STATION (ROOT) STARTED heap:159132[0m
+[0;32mI (1079) main_task: Returned from app_main()[0m
+[0;32mI (1369) mesh: [S4]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-52[0m
+[0;32mI (1369) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-52, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1379) mesh: find root:ESPM_C47ED4, root_cap:1(max:1000), new channel:6, old channel:0[0m
+[0;32mI (1379) mesh: [FIND][ch:6]AP:22, otherID:0, MAP:1, idle:0, candidate:0, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1389) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1399) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (1409) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1419) wifi:Total power save buffer number: 16[0m
+[0;32mI (1419) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1429) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1399) mesh_main: unknown event id:22[0m
+[0;33mW (1439) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1449) wifi:Total power save buffer number: 16[0m
+[0;32mI (1749) mesh: [SCAN][ch:6]AP:25, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1749) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1759) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-24, 1c:c3:ab:c4:7e:d5[layer:1, assoc:0], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1779) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (1909) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (1909) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1919) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1939) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1939) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (1939) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:1[0m
+[0;32mI (1949) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (1949) wifi:connected with ESPM_C47ED4, aid = 1, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (1959) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (1969) wifi:pm start, type: 0[0m
+
+[0;32mI (1979) mesh_main: unknown event id:14[0m
+[0;32mI (1979) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (1989) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:10911ms, retries:1<normal connected>[0m
+[0;32mI (1989) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (1999) mesh_main: unknown event id:11[0m
+[0;32mI (2219) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (13159) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-24, assoc:0(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (14669) mesh: 5966<scan>parent layer:1, rssi:-27, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (14669) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (14679) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (14679) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-27[0m
+[0;32mI (14689) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:7851ms, retries:2<>[0m
+[0;32mI (22739) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-24, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m

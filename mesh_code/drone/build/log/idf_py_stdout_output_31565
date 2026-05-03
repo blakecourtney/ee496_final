@@ -1,0 +1,720 @@
+Command: /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/internal_communication.elf /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/bootloader.elf -m '/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/blakecourtney/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+
+[0;32mI (772) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (772) mesh: [IO]eoexist: 0[0m
+
+[0;32mI (772) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (782) wifi:Total power save buffer number: 16[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 27 2026 18:40:30[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=223e4h (140260) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0003240c vaddr=3ffb0000 size=03e98h ( 16024) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=000362ac vaddr=40080000 size=09d6ch ( 40300) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a53f8h (676856) map[0m
+[0;32mI (388) esp_image: segment 4: paddr=000e5420 vaddr=40089d6c size=0d024h ( 53284) load[0m
+[0;32mI (409) esp_image: segment 5: paddr=000f244c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (420) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (420) boot: Disabling RNG early entropy source...[0m
+[0;32mI (431) cpu_start: Multicore app[0m
+[0;32mI (439) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (439) cpu_start: Pro cpu start user code[0m
+[0;32mI (439) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (441) app_init: Application information:[0m
+[0;32mI (445) app_init: Project name:     internal_communication[0m
+[0;32mI (450) app_init: App version:      82844f9-dirty[0m
+[0;32mI (454) app_init: Compile time:     Apr 27 2026 22:42:22[0m
+[0;32mI (459) app_init: ELF file SHA256:  a8473fbff...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (471) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (475) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (479) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB9CB0 len 00026350 (152 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40096D90 len 00009270 (36 KiB): IRAM[0m
+[0;32mI (513) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (532) main_task: Started on CPU0[0m
+[0;32mI (542) main_task: Calling app_main()[0m
+[0;32mI (542) mesh_main: image buffer allocated (115200 bytes)[0m
+[0;32mI (582) wifi:wifi driver task: 3ffdee78, prio:23, stack:6656, core=0[0m
+[0;32mI (592) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (592) wifi:wifi certification version: v7.0[0m
+[0;32mI (592) wifi:config NVS flash: enabled[0m
+[0;32mI (592) wifi:config nano formatting: disabled[0m
+[0;32mI (602) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (602) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (612) wifi:Init management short buffer num: 32[0m
+[0;32mI (612) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (622) wifi:Init static rx buffer num: 10[0m
+[0;32mI (622) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (632) wifi_init: rx ba win: 6[0m
+[0;32mI (632) wifi_init: accept mbox: 6[0m
+[0;32mI (632) wifi_init: tcpip mbox: 32[0m
+[0;32mI (642) wifi_init: udp mbox: 6[0m
+[0;32mI (642) wifi_init: tcp mbox: 6[0m
+[0;32mI (642) wifi_init: tcp tx win: 5760[0m
+[0;32mI (642) wifi_init: tcp rx win: 5760[0m
+[0;32mI (652) wifi_init: tcp mss: 1440[0m
+[0;32mI (652) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (652) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (662) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (742) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;32mI (742) wifi:enable tsf[0m
+[0;32mI (742) wifi:Total power save buffer number: 16[0m
+[0;32mI (752) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (752) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (752) mesh: <nvs>read layer:0[0m
+[0;32mI (752) mesh: <nvs>read assoc:0[0m
+[0;32mI (762) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (762) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (782) wifi:Total power save buffer number: 16[0m
+[0;32mI (1032) mesh_main: MAVLink UART initialized[0m
+[0;32mI (1032) mesh_main: ML UART initialized[0m
+[0;32mI (1042) mesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1042) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1062) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1062) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1062) mesh_main: DRONE NODE STARTED heap:30700[0m
+[0;32mI (1062) main_task: Returned from app_main()[0m
+[0;32mI (1362) mesh: [FIND][ch:6]AP:14, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (1362) mesh: [FIND:1]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1372) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:2[0m
+[0;32mI (1502) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (1502) mesh: [FIND:2]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1512) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:3[0m
+[0;32mI (1822) mesh: [FIND][ch:6]AP:15, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (1822) mesh: [FIND:3]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1832) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:4[0m
+[0;32mI (1962) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (1962) mesh: [FIND:4]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1972) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:5[0m
+[0;32mI (2282) mesh: [FIND][ch:6]AP:18, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (2282) mesh: [FIND:5]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (2282) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:6[0m
+[0;32mI (2412) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (2422) mesh: [FIND:6]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (2422) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:7[0m
+[0;32mI (2732) mesh: [FIND][ch:6]AP:20, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (2732) mesh: [FIND:7]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (2742) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:8[0m
+[0;32mI (2872) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (2872) mesh: [FIND:8]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (2882) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:9[0m
+[0;32mI (3192) mesh: [FIND][ch:6]AP:13, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (3192) mesh: [FIND:9]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (3202) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:10[0m
+[0;32mI (3332) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (3332) mesh: [FIND:10]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (3342) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:11[0m
+[0;32mI (3652) mesh: [FIND][ch:6]AP:20, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (3652) mesh: [FIND:11]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (3662) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:12[0m
+[0;32mI (3792) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (3792) mesh: [FIND:12]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (3802) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:13[0m
+[0;32mI (4112) mesh: [FIND][ch:6]AP:9, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (4112) mesh: [FIND:13]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (4122) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:14[0m
+[0;32mI (4252) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (4252) mesh: [FIND:14]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (4252) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:15[0m
+[0;32mI (4562) mesh: [FIND][ch:6]AP:6, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (4572) mesh: [FIND:15]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (4572) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:16[0m
+[0;32mI (4702) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (4702) mesh: [FIND:16]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (4712) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:17[0m
+[0;32mI (5022) mesh: [FIND][ch:6]AP:7, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (5022) mesh: [FIND:17]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (5032) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:18[0m
+[0;32mI (5162) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (5162) mesh: [FIND:18]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (5172) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:19[0m
+[0;32mI (5482) mesh: [FIND][ch:6]AP:12, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (5482) mesh: [FIND:19]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (5492) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:20[0m
+[0;32mI (5622) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (5622) mesh: [FIND:20]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (5632) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:21[0m
+[0;32mI (5942) mesh: [FIND][ch:6]AP:10, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (5942) mesh: [FIND:21]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (5952) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:22[0m
+[0;32mI (6082) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (6082) mesh: [FIND:22]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (6092) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:23[0m
+[0;32mI (6402) mesh: [FIND][ch:6]AP:11, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (6402) mesh: [FIND:23]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (6402) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:24[0m
+[0;32mI (6532) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (6532) mesh: [FIND:24]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (6542) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:25[0m
+[0;32mI (6852) mesh: [FIND][ch:6]AP:22, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (6852) mesh: [FIND:25]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (6862) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:26[0m
+[0;32mI (6992) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (6992) mesh: [FIND:26]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (7002) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:27[0m
+[0;32mI (7312) mesh: [FIND][ch:6]AP:11, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (7312) mesh: [FIND:27]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (7322) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:28[0m
+[0;32mI (7452) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (7452) mesh: [FIND:28]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (7462) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:29[0m
+[0;32mI (7772) mesh: [FIND][ch:6]AP:10, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (7772) mesh: [FIND:29]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (7782) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:30[0m
+[0;32mI (7912) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (7912) mesh: [FIND:30]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (7922) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:31[0m
+[0;32mI (8232) mesh: [FIND][ch:6]AP:6, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (8232) mesh: [FIND:31]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (8232) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:32[0m
+[0;32mI (8372) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (8372) mesh: [FIND:32]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (8372) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:33[0m
+[0;32mI (8682) mesh: [FIND][ch:6]AP:7, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (8682) mesh: [FIND:33]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (8692) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:34[0m
+[0;32mI (8822) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (8822) mesh: [FIND:34]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (8832) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:35[0m
+[0;32mI (9142) mesh: [FIND][ch:6]AP:7, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (9142) mesh: [FIND:35]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (9152) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:36[0m
+[0;32mI (9282) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (9282) mesh: [FIND:36]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (9292) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:37[0m
+[0;32mI (9602) mesh: [FIND][ch:6]AP:5, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (9602) mesh: [FIND:37]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (9612) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:38[0m
+[0;32mI (9742) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (9742) mesh: [FIND:38]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (9752) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:39[0m
+[0;32mI (10062) mesh: [FIND][ch:6]AP:15, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (10062) mesh: [FIND:39]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (10072) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:40[0m
+[0;32mI (10202) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (10202) mesh: [FIND:40]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (10202) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:41[0m
+[0;32mI (10522) mesh: [FIND][ch:6]AP:14, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (10522) mesh: [FIND:41]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (10522) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:42[0m
+[0;32mI (10652) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (10652) mesh: [FIND:42]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (10662) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:43[0m
+[0;32mI (10972) mesh: [FIND][ch:6]AP:20, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (10972) mesh: [FIND:43]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (10982) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:44[0m
+[0;32mI (11112) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (11112) mesh: [FIND:44]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (11122) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:45[0m
+[0;32mI (11432) mesh: [FIND][ch:6]AP:22, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (11432) mesh: [FIND:45]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (11442) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:46[0m
+[0;32mI (11572) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (11572) mesh: [FIND:46]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (11582) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:47[0m
+[0;32mI (11892) mesh: [FIND][ch:6]AP:15, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (11892) mesh: [FIND:47]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (11902) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:48[0m
+[0;32mI (12032) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (12032) mesh: [FIND:48]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (12042) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:49[0m
+[0;32mI (12352) mesh: [FIND][ch:6]AP:8, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (12352) mesh: [FIND:49]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (12362) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:50[0m
+[0;32mI (12492) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (12492) mesh: [FIND:50]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (12502) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:51[0m
+[0;32mI (12812) mesh: [FIND][ch:6]AP:12, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (12812) mesh: [FIND:51]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (12822) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:52[0m
+[0;32mI (12952) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (12952) mesh: [FIND:52]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (12962) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:53[0m
+[0;32mI (13272) mesh: [FIND][ch:6]AP:12, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (13272) mesh: [FIND:53]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (13272) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:54[0m
+[0;32mI (13402) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (13412) mesh: [FIND:54]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (13412) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:55[0m
+[0;32mI (13722) mesh: [FIND][ch:6]AP:15, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00][0m
+[0;32mI (13722) mesh: [FIND:55]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (13732) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x1, look_for_nwk_count:56[0m
+[0;32mI (13862) mesh: [FIND][ch:6]AP:0, otherID:0, MAP:0, idle:0, candidate:0, root:0[00:00:00:00:00:00]<scan router>[0m
+[0;32mI (13862) mesh: [FIND:56]fail to find a network, channel:0, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (13872) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x3, need_scan_router:0x0, look_for_nwk_count:57[0m
+[0;32mI (14182) mesh: [S3]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-40[0m
+[0;32mI (14182) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-40, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (14192) mesh: [FIND][ch:6]AP:24, otherID:0, MAP:0, idle:0, candidate:0, root:0[28:05:a5:32:e2:85]router found[0m
+[0;32mI (14202) mesh: [FIND:57]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (14212) mesh_main: unknown event id:22[0m
+[0;32mI (14212) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (14222) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (14232) wifi:Total power save buffer number: 16[0m
+[0;32mI (14232) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (14232) wifi:Init max length of beacon: 752/752[0m
+[0;33mW (14252) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (14262) wifi:Total power save buffer number: 16[0m
+[0;32mI (14562) mesh: [SCAN][ch:6]AP:16, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (14562) mesh: 6916[SCAN]init rc[ttl:127/votes:1][1c:c3:ab:c4:7e:d5,-120][0m
+[0;32mI (14572) mesh: 6916[SCAN]init rc[ttl:127/votes:1][1c:c3:ab:c4:7e:d5,-120][0m
+[0;32mI (14582) mesh: 1366, vote myself, router rssi:-42 > voted rc_rssi:-120[0m
+[0;32mI (14582) mesh: [SCAN:1/10]rc[128][1c:c3:ab:c4:1b:45,-42], self[1c:c3:ab:c4:1b:44,-42,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:1.00][128,1,1c:c3:ab:c4:1b:45][0m
+
+[0;32mI (14902) mesh: [SCAN][ch:6]AP:19, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (14902) mesh: [SCAN:2/10]rc[128][1c:c3:ab:c4:1b:45,-42], self[1c:c3:ab:c4:1b:44,-43,reason:0,votes:1,idle][mine:1,voter:1(1.00)percent:1.00][128,1,1c:c3:ab:c4:1b:45][0m
+
+[0;32mI (15222) mesh: [SCAN][ch:6]AP:12, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (15222) mesh: [SCAN:3/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-44,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,1,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (15542) mesh: [SCAN][ch:6]AP:16, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (15542) mesh: [SCAN:4/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-43,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,1,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (15862) mesh: [SCAN][ch:6]AP:11, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (15862) mesh: [SCAN:5/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-43,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,1,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (16182) mesh: [SCAN][ch:6]AP:11, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (16182) mesh: [SCAN:6/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-42,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (16502) mesh: [SCAN][ch:6]AP:12, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (16502) mesh: [SCAN:7/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-46,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (16822) mesh: [SCAN][ch:6]AP:11, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (16822) mesh: [SCAN:8/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-52,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (17142) mesh: [SCAN][ch:6]AP:8, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (17142) mesh: [SCAN:9/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-60,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (17462) mesh: [SCAN][ch:6]AP:10, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (17462) mesh: [SCAN:10/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-59,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (17782) mesh: [SCAN][ch:6]AP:11, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (17782) mesh: [SCAN:11/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-61,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (18102) mesh: [SCAN][ch:6]AP:10, other(ID:0, RD:0), MAP:0, idle:0, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (18102) mesh: 1328[SCAN]init rc[1c:c3:ab:c4:1b:45,-64], mine:0, voter:0[0m
+[0;32mI (18112) mesh: [SCAN:12/10]rc[126][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-64,reason:0,votes:0,idle][mine:0,voter:1(0.00)percent:1.00][126,2,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (18422) mesh: [SCAN][ch:6]AP:10, other(ID:0, RD:0), MAP:1, idle:1, candidate:0, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]<>[0m
+[0;32mI (18422) mesh: [FAIL][13]root:12, fail:1, normal:0, <pre>backoff:0[0m
+
+[0;32mI (18732) mesh: [SCAN][ch:6]AP:22, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (18732) mesh: [SCAN:13/10]rc[0][00:00:00:00:00:00,-42], self[1c:c3:ab:c4:1b:44,-59,reason:0,votes:0,idle][mine:0,voter:1(0.00)percent:1.00][0,0,00:00:00:00:00:00][0m
+
+[0;32mI (19052) mesh: [SCAN][ch:6]AP:12, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (19052) mesh: 6916[SCAN]init rc[ttl:127/votes:1][1c:c3:ab:c4:7e:d5,-22][0m
+[0;32mI (19062) mesh: [SCAN:14/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-52,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,1,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (19382) mesh: [SCAN][ch:6]AP:14, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (19382) mesh: [SCAN:15/10]rc[0][00:00:00:00:00:00,-42], self[1c:c3:ab:c4:1b:44,-49,reason:0,votes:0,idle][mine:0,voter:1(0.00)percent:1.00][0,0,00:00:00:00:00:00][0m
+
+[0;32mI (19702) mesh: [SCAN][ch:6]AP:12, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (19702) mesh: 6916[SCAN]init rc[ttl:127/votes:1][1c:c3:ab:c4:7e:d5,-20][0m
+[0;32mI (19712) mesh: [SCAN:16/10]rc[127][1c:c3:ab:c4:7e:d5,-42], self[1c:c3:ab:c4:1b:44,-47,reason:0,votes:0,idle][mine:0,voter:2(0.00)percent:1.00][127,1,1c:c3:ab:c4:7e:d5][0m
+
+[0;32mI (20022) mesh: [SCAN][ch:6]AP:7, other(ID:0, RD:0), MAP:1, idle:1, candidate:1, root:0, topMAP:0[c:0,i:1][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (20022) mesh: [SCAN:17/10]rc[0][00:00:00:00:00:00,-42], self[1c:c3:ab:c4:1b:44,-45,reason:0,votes:0,idle][mine:0,voter:1(0.00)percent:1.00][0,0,00:00:00:00:00:00][0m
+
+[0;32mI (20342) mesh: [SCAN][ch:6]AP:8, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (20342) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (20352) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-27, 1c:c3:ab:c4:7e:d5[layer:1, assoc:0], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-42/0][0m
+[0;32mI (20372) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (20452) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (20452) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (20462) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (20472) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (20482) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (20482) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:1[0m
+[0;32mI (20482) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (20492) wifi:connected with ESPM_C47ED4, aid = 1, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (20502) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (20502) wifi:pm start, type: 0[0m
+
+[0;32mI (20512) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (20512) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (20532) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:8763ms, retries:1<normal connected>[0m
+[0;32mI (20532) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (20532) mesh_main: unknown event id:11[0m
+[0;32mI (20532) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (20562) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (20762) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (22562) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (24562) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (26562) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (28572) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (29502) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-27, assoc:0(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (30572) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (31002) mesh: 5966<scan>parent layer:1, rssi:-36, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (31002) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (31012) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (31022) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-36[0m
+[0;32mI (31032) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:6870ms, retries:2<>[0m
+[0;32mI (32572) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (34572) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (36572) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (38072) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-33, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (38582) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (39572) mesh: 5966<scan>parent layer:1, rssi:-34, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (39572) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (39582) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (39592) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-34[0m
+[0;32mI (39602) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:10132ms, retries:3<>[0m
+[0;32mI (40602) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (42602) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (44602) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (46602) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (48612) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (49982) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-33, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (50612) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (51482) mesh: 5966<scan>parent layer:1, rssi:-40, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (51482) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (51492) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (51502) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-40[0m
+[0;32mI (51512) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:407237ms, retries:3<>[0m
+[0;32mI (52612) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (54612) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (56612) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (58622) mesh_main: [DRONE-TX] telemetry lat:34.01996 lon:-118.28551 alt:55.3[0m
+[0;32mI (58762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (59752) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (60622) mesh_main: [DRONE-TX] telemetry lat:34.01996 lon:-118.28551 alt:55.4[0m
+[0;32mI (60752) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (61762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (62622) mesh_main: [DRONE-TX] telemetry lat:34.01996 lon:-118.28551 alt:55.5[0m
+[0;32mI (62762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (63762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (64622) mesh_main: [DRONE-TX] telemetry lat:34.01996 lon:-118.28551 alt:55.5[0m
+[0;32mI (64762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (65762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (66632) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:55.6[0m
+[0;32mI (66762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (67762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (68642) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:55.7[0m
+[0;32mI (68762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (69762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (70662) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:55.9[0m
+[0;32mI (70762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (71762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (72672) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:56.0[0m
+[0;32mI (72762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (73752) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (74682) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:55.8[0m
+[0;32mI (74752) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (75762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (76702) mesh_main: [DRONE-TX] telemetry lat:34.01997 lon:-118.28551 alt:55.8[0m
+[0;32mI (76762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (77762) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (36222) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (36412) mesh: 5966<scan>parent layer:1, rssi:-24, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (36412) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (36422) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (36422) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-24[0m
+[0;32mI (36432) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:325301ms, retries:3<>[0m
+[0;32mI (38232) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (40252) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (42272) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+14 KiB): D/IRAM
+[0;32mI (486) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (492) heap_init: At 40096D90 len 00009270 (36 KiB): IRAM[0m
+[0;32mI (498) spi_flash: detected chip: generic[0m
+[0;32mI (501) spi_flash: flash io: dio[0m
+[0;33mW (503) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (517) main_task: Started on CPU0[0m
+[0;32mI (527) main_task: Calling app_main()[0m
+[0;32mI (527) mesh_main: image buffer allocated (115200 bytes)[0m
+[0;32mI (567) wifi:wifi driver task: 3ffdee78, prio:23, stack:6656, core=0[0m
+[0;32mI (577) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (577) wifi:wifi certification version: v7.0[0m
+[0;32mI (577) wifi:config NVS flash: enabled[0m
+[0;32mI (577) wifi:config nano formatting: disabled[0m
+[0;32mI (587) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (587) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (597) wifi:Init management short buffer num: 32[0m
+[0;32mI (597) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (607) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (607) wifi:Init static rx buffer num: 10[0m
+[0;32mI (607) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (617) wifi_init: rx ba win: 6[0m
+[0;32mI (617) wifi_init: accept mbox: 6[0m
+[0;32mI (617) wifi_init: tcpip mbox: 32[0m
+[0;32mI (627) wifi_init: udp mbox: 6[0m
+[0;32mI (627) wifi_init: tcp mbox: 6[0m
+[0;32mI (627) wifi_init: tcp tx win: 5760[0m
+[0;32mI (627) wifi_init: tcp rx win: 5760[0m
+[0;32mI (637) wifi_init: tcp mss: 1440[0m
+[0;32mI (637) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (637) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (647) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (727) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;32mI (727) wifi:enable tsf[0m
+[0;32mI (727) wifi:Total power save buffer number: 16[0m
+[0;32mI (727) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (727) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (737) mesh: <nvs>read layer:0[0m
+[0;32mI (737) mesh: <nvs>read assoc:0[0m
+[0;32mI (737) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (747) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (757) wifi:Total power save buffer number: 16[0m
+[0;32mI (1017) mesh_main: MAVLink UART initialized[0m
+[0;32mI (1017) mesh_main: ML UART initialized[0m
+[0;32mI (1017) mesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1027) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1037) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1037) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1037) mesh_main: DRONE NODE STARTED heap:30972[0m
+[0;32mI (1047) main_task: Returned from app_main()[0m
+[0;32mI (1337) mesh: [S1]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-39[0m
+[0;32mI (1337) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-39, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1347) mesh: find root:ESPM_C47ED4, root_cap:2(max:10), new channel:6, old channel:0[0m
+[0;32mI (1347) mesh: [FIND][ch:6]AP:6, otherID:0, MAP:1, idle:0, candidate:0, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1357) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1367) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (1377) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1387) wifi:Total power save buffer number: 16[0m
+[0;32mI (1387) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1387) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1367) mesh_main: unknown event id:22[0m
+[0;33mW (1407) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1417) wifi:Total power save buffer number: 16[0m
+[0;32mI (1717) mesh: [SCAN][ch:6]AP:9, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1717) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1727) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-19, 1c:c3:ab:c4:7e:d5[layer:1, assoc:1], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1747) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (1907) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (1907) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1917) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1937) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1937) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (1937) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:2[0m
+[0;32mI (1937) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (1947) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (1957) wifi:connected with ESPM_C47ED4, aid = 2, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (1967) wifi:security: WPA2-PSK, phy: bgn, rssi: -19[0m
+[0;32mI (1977) wifi:pm start, type: 0[0m
+
+[0;32mI (1977) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (1987) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:5157ms, retries:1<normal connected>[0m
+[0;32mI (1987) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (1997) mesh_main: unknown event id:11[0m
+[0;32mI (1997) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (2047) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2207) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (3017) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (3027) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (3077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (4047) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (4077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (5077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (6057) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (6077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (7137) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (7267) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-25, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (7737) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (8067) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (8077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (8777) mesh: 5966<scan>parent layer:1, rssi:-27, assoc:2(cnx rssi threshold:-120)[0m
+[0;32mI (8777) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (8777) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (8787) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-27[0m
+[0;32mI (8797) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:8984ms, retries:2<>[0m
+[0;32mI (9077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (10067) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (10077) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (11077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (12077) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (12087) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (1042) mesh_main: MAVLink UART initialized[0m
+[0;32mI (1042) mesh_main: ML UART initialized[0m
+[0;32mI (1042) mesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1052) wifi:mode : sta (1c:c3:ab:c4:1f:e0)[0m
+[0;32mI (1062) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1062) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1062) mesh_main: DRONE NODE STARTED heap:30716[0m
+[0;32mI (1062) main_task: Returned from app_main()[0m
+[0;32mI (1362) mesh: find root:ESPM_C47ED4, root_cap:2(max:10), new channel:6, old channel:0[0m
+[0;32mI (1362) mesh: [S10]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-47[0m
+[0;32mI (1362) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-47, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1372) mesh: [FIND][ch:6]AP:13, otherID:0, MAP:2, idle:0, candidate:1, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1382) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1392) wifi:mode : sta (1c:c3:ab:c4:1f:e0) + softAP (1c:c3:ab:c4:1f:e1)[0m
+[0;33mW (1402) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1412) wifi:Total power save buffer number: 16[0m
+[0;32mI (1412) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1412) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1392) mesh_main: unknown event id:22[0m
+[0;33mW (1432) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1442) wifi:Total power save buffer number: 16[0m
+[0;32mI (1742) mesh: [SCAN][ch:6]AP:16, other(ID:0, RD:0), MAP:2, idle:0, candidate:2, root:1, topMAP:1[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1742) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1752) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-21, 1c:c3:ab:c4:7e:d5[layer:1, assoc:1], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1772) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (2072) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2082) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2082) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2102) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2102) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (2102) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:2[0m
+[0;32mI (2112) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (2122) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2122) wifi:connected with ESPM_C47ED4, aid = 2, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2132) wifi:security: WPA2-PSK, phy: bgn, rssi: -28[0m
+[0;32mI (2142) wifi:pm start, type: 0[0m
+
+[0;32mI (2142) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (2152) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:4859ms, retries:1<normal connected>[0m
+[0;32mI (2152) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (2162) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (2162) mesh_main: unknown event id:11[0m
+[0;32mI (2182) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2372) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (4192) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (6192) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (7132) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-28, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (8212) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (8632) mesh: 5966<scan>parent layer:1, rssi:-29, assoc:2(cnx rssi threshold:-120)[0m
+[0;32mI (8632) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (8642) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (8652) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-29[0m
+[0;32mI (8652) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:7893ms, retries:2<>[0m
+[0;32mI (10212) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (12222) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (14232) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (15572) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (16232) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (16742) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-28, assoc:2(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (18232) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (18252) mesh: 5966<scan>parent layer:1, rssi:-33, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (18252) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (18262) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (18262) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-33[0m
+[0;32mI (18272) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:12125ms, retries:3<>[0m
+[0;32mI (20232) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (22262) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (24262) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (25512) wifi:dp: 1, bi: 307200, li: 1, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (26272) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (28282) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (30292) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (30692) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-29, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (32202) mesh: 5966<scan>parent layer:1, rssi:-35, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (32202) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (32212) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (32212) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-35[0m
+[0;32mI (32222) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:369769ms, retries:3<>[0m
+[0;32mI (32292) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (34302) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (36302) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (38302) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (40322) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (42322) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (44322) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (46322) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (48332) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (50372) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (52372) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (54382) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (56382) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (58392) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (60402) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (62412) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (64412) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (66412) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (68412) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (70422) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (72422) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (74432) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (76442) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (78442) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (80442) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (82452) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m
+[0;32mI (84452) mesh_main: [DRONE-TX] heartbeat drone_id:224 (no MAVLink yet)[0m

@@ -1,0 +1,2 @@
+source /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/gdbinit/symbols
+source /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/gdbinit/connect

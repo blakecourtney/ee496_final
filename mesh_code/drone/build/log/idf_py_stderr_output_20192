@@ -1,0 +1,21 @@
+Command: /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/internal_communication.elf /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/bootloader.elf -m '/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/blakecourtney/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+Exception in thread Thread-2 (_run_outer):
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/opt/anaconda3/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/stoppable_thread.py", line 47, in _run_outer
+    self.run()
+  File "/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_reader.py", line 58, in run
+    self.open_serial(reset=self.reset)
+  File "/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_reader.py", line 109, in open_serial
+    self.serial.open()
+  File "/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/lib/python3.12/site-packages/serial/serialposix.py", line 332, in open
+    self._reconfigure_port(force_update=True)
+  File "/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/lib/python3.12/site-packages/serial/serialposix.py", line 517, in _reconfigure_port
+    termios.tcsetattr(
+termios.error: (22, 'Invalid argument')
+[0m

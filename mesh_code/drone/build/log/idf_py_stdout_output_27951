@@ -1,0 +1,240 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Minimal build - ON
+-- Building ESP-IDF components for target esp32
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+-- Project sdkconfig file /Users/blakecourtney/Documents/EE496/mesh_code/drone/sdkconfig
+Loading defaults file /Users/blakecourtney/Documents/EE496/mesh_code/drone/sdkconfig.defaults...
+-- Compiler supported targets: xtensa-esp-elf
+-- USING O3
+-- App "internal_communication" version: 82844f9-dirty
+-- Adding linker script /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-reent-funcs.ld
+-- Adding linker script /Users/blakecourtney/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_update bootloader bootloader_support cxx efuse esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_gpio esp_driver_uart esp_driver_usb_serial_jtag esp_event esp_hw_support esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi esptool_py freertos hal heap log lwip main mbedtls newlib nvs_flash partition_table pthread soc spi_flash vfs wpa_supplicant xtensa
+-- Component paths: /Users/blakecourtney/esp/esp-idf/components/app_update /Users/blakecourtney/esp/esp-idf/components/bootloader /Users/blakecourtney/esp/esp-idf/components/bootloader_support /Users/blakecourtney/esp/esp-idf/components/cxx /Users/blakecourtney/esp/esp-idf/components/efuse /Users/blakecourtney/esp/esp-idf/components/esp_app_format /Users/blakecourtney/esp/esp-idf/components/esp_bootloader_format /Users/blakecourtney/esp/esp-idf/components/esp_coex /Users/blakecourtney/esp/esp-idf/components/esp_common /Users/blakecourtney/esp/esp-idf/components/esp_driver_gpio /Users/blakecourtney/esp/esp-idf/components/esp_driver_uart /Users/blakecourtney/esp/esp-idf/components/esp_driver_usb_serial_jtag /Users/blakecourtney/esp/esp-idf/components/esp_event /Users/blakecourtney/esp/esp-idf/components/esp_hw_support /Users/blakecourtney/esp/esp-idf/components/esp_mm /Users/blakecourtney/esp/esp-idf/components/esp_netif /Users/blakecourtney/esp/esp-idf/components/esp_netif_stack /Users/blakecourtney/esp/esp-idf/components/esp_partition /Users/blakecourtney/esp/esp-idf/components/esp_phy /Users/blakecourtney/esp/esp-idf/components/esp_pm /Users/blakecourtney/esp/esp-idf/components/esp_ringbuf /Users/blakecourtney/esp/esp-idf/components/esp_rom /Users/blakecourtney/esp/esp-idf/components/esp_security /Users/blakecourtney/esp/esp-idf/components/esp_system /Users/blakecourtney/esp/esp-idf/components/esp_timer /Users/blakecourtney/esp/esp-idf/components/esp_vfs_console /Users/blakecourtney/esp/esp-idf/components/esp_wifi /Users/blakecourtney/esp/esp-idf/components/esptool_py /Users/blakecourtney/esp/esp-idf/components/freertos /Users/blakecourtney/esp/esp-idf/components/hal /Users/blakecourtney/esp/esp-idf/components/heap /Users/blakecourtney/esp/esp-idf/components/log /Users/blakecourtney/esp/esp-idf/components/lwip /Users/blakecourtney/Documents/EE496/mesh_code/drone/main /Users/blakecourtney/esp/esp-idf/components/mbedtls /Users/blakecourtney/esp/esp-idf/components/newlib /Users/blakecourtney/esp/esp-idf/components/nvs_flash /Users/blakecourtney/esp/esp-idf/components/partition_table /Users/blakecourtney/esp/esp-idf/components/pthread /Users/blakecourtney/esp/esp-idf/components/soc /Users/blakecourtney/esp/esp-idf/components/spi_flash /Users/blakecourtney/esp/esp-idf/components/vfs /Users/blakecourtney/esp/esp-idf/components/wpa_supplicant /Users/blakecourtney/esp/esp-idf/components/xtensa
+-- Configuring done (2.6s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/blakecourtney/Documents/EE496/mesh_code/drone/build
+[1/13] Performing build step for 'bootloader'
+[1/1] cd /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/esp-idf/esptool_py && /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/bootloader.bin
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[2/13] No install step for 'bootloader'
+[3/13] Completed 'bootloader'
+[4/13] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[5/13] Linking C static library esp-idf/esp_app_format/libesp_app_format.a
+[6/13] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mesh_main.c.obj
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3005,
+                 from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/mavlink.h:32,
+                 from /Users/blakecourtney/Documents/EE496/mesh_code/drone/main/mesh_main.c:12:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h: In function 'mavlink_msg_set_attitude_target_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:241:240: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  241 |     return mavlink_msg_set_attitude_target_pack(system_id, component_id, msg, set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                             ~~~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:241:404: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  241 |     return mavlink_msg_set_attitude_target_pack(system_id, component_id, msg, set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                                                                                                                                                                                                 ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h: In function 'mavlink_msg_set_attitude_target_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:255:251: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  255 |     return mavlink_msg_set_attitude_target_pack_chan(system_id, component_id, chan, msg, set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:255:415: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  255 |     return mavlink_msg_set_attitude_target_pack_chan(system_id, component_id, chan, msg, set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                                                                                                                                                                                                            ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h: In function 'mavlink_msg_set_attitude_target_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:269:257: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  269 |     return mavlink_msg_set_attitude_target_pack_status(system_id, component_id, _status, msg,  set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                                              ~~~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_attitude_target.h:269:421: warning: taking address of packed member of 'struct __mavlink_set_attitude_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  269 |     return mavlink_msg_set_attitude_target_pack_status(system_id, component_id, _status, msg,  set_attitude_target->time_boot_ms, set_attitude_target->target_system, set_attitude_target->target_component, set_attitude_target->type_mask, set_attitude_target->q, set_attitude_target->body_roll_rate, set_attitude_target->body_pitch_rate, set_attitude_target->body_yaw_rate, set_attitude_target->thrust, set_attitude_target->thrust_body);
+      |                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3048:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h: In function 'mavlink_msg_distance_sensor_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h:264:385: warning: taking address of packed member of 'struct __mavlink_distance_sensor_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  264 |     return mavlink_msg_distance_sensor_pack(system_id, component_id, msg, distance_sensor->time_boot_ms, distance_sensor->min_distance, distance_sensor->max_distance, distance_sensor->current_distance, distance_sensor->type, distance_sensor->id, distance_sensor->orientation, distance_sensor->covariance, distance_sensor->horizontal_fov, distance_sensor->vertical_fov, distance_sensor->quaternion, distance_sensor->signal_quality);
+      |                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h: In function 'mavlink_msg_distance_sensor_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h:278:396: warning: taking address of packed member of 'struct __mavlink_distance_sensor_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  278 |     return mavlink_msg_distance_sensor_pack_chan(system_id, component_id, chan, msg, distance_sensor->time_boot_ms, distance_sensor->min_distance, distance_sensor->max_distance, distance_sensor->current_distance, distance_sensor->type, distance_sensor->id, distance_sensor->orientation, distance_sensor->covariance, distance_sensor->horizontal_fov, distance_sensor->vertical_fov, distance_sensor->quaternion, distance_sensor->signal_quality);
+      |                                                                                                                                                                                                                                                                                                                                                                                             ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h: In function 'mavlink_msg_distance_sensor_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_distance_sensor.h:292:402: warning: taking address of packed member of 'struct __mavlink_distance_sensor_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  292 |     return mavlink_msg_distance_sensor_pack_status(system_id, component_id, _status, msg,  distance_sensor->time_boot_ms, distance_sensor->min_distance, distance_sensor->max_distance, distance_sensor->current_distance, distance_sensor->type, distance_sensor->id, distance_sensor->orientation, distance_sensor->covariance, distance_sensor->horizontal_fov, distance_sensor->vertical_fov, distance_sensor->quaternion, distance_sensor->signal_quality);
+      |                                                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~~^~~~~~~~~~~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3062:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h: In function 'mavlink_msg_battery_status_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:289:193: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  289 |     return mavlink_msg_battery_status_pack(system_id, component_id, msg, battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                   ~~~~~~~~~~~~~~^~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:289:416: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  289 |     return mavlink_msg_battery_status_pack(system_id, component_id, msg, battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h: In function 'mavlink_msg_battery_status_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:303:204: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  303 |     return mavlink_msg_battery_status_pack_chan(system_id, component_id, chan, msg, battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                              ~~~~~~~~~~~~~~^~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:303:427: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  303 |     return mavlink_msg_battery_status_pack_chan(system_id, component_id, chan, msg, battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                                                                                                                                                                                                                                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h: In function 'mavlink_msg_battery_status_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:317:210: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  317 |     return mavlink_msg_battery_status_pack_status(system_id, component_id, _status, msg,  battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                                    ~~~~~~~~~~~~~~^~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_battery_status.h:317:433: warning: taking address of packed member of 'struct __mavlink_battery_status_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  317 |     return mavlink_msg_battery_status_pack_status(system_id, component_id, _status, msg,  battery_status->id, battery_status->battery_function, battery_status->type, battery_status->temperature, battery_status->voltages, battery_status->current_battery, battery_status->current_consumed, battery_status->energy_consumed, battery_status->battery_remaining, battery_status->time_remaining, battery_status->charge_state, battery_status->voltages_ext, battery_status->mode, battery_status->fault_bitmask);
+      |                                                                                                                                                                                                                                                                                                                                                                                                                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3063:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h: In function 'mavlink_msg_landing_target_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h:288:347: warning: taking address of packed member of 'struct __mavlink_landing_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  288 |     return mavlink_msg_landing_target_pack(system_id, component_id, msg, landing_target->time_usec, landing_target->target_num, landing_target->frame, landing_target->angle_x, landing_target->angle_y, landing_target->distance, landing_target->size_x, landing_target->size_y, landing_target->x, landing_target->y, landing_target->z, landing_target->q, landing_target->type, landing_target->position_valid);
+      |                                                                                                                                                                                                                                                                                                                                             ~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h: In function 'mavlink_msg_landing_target_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h:302:358: warning: taking address of packed member of 'struct __mavlink_landing_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  302 |     return mavlink_msg_landing_target_pack_chan(system_id, component_id, chan, msg, landing_target->time_usec, landing_target->target_num, landing_target->frame, landing_target->angle_x, landing_target->angle_y, landing_target->distance, landing_target->size_x, landing_target->size_y, landing_target->x, landing_target->y, landing_target->z, landing_target->q, landing_target->type, landing_target->position_valid);
+      |                                                                                                                                                                                                                                                                                                                                                        ~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h: In function 'mavlink_msg_landing_target_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_landing_target.h:316:364: warning: taking address of packed member of 'struct __mavlink_landing_target_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  316 |     return mavlink_msg_landing_target_pack_status(system_id, component_id, _status, msg,  landing_target->time_usec, landing_target->target_num, landing_target->frame, landing_target->angle_x, landing_target->angle_y, landing_target->distance, landing_target->size_x, landing_target->size_y, landing_target->x, landing_target->y, landing_target->z, landing_target->q, landing_target->type, landing_target->position_valid);
+      |                                                                                                                                                                                                                                                                                                                                                              ~~~~~~~~~~~~~~^~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3074:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h: In function 'mavlink_msg_home_position_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h:268:216: warning: taking address of packed member of 'struct __mavlink_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  268 |     return mavlink_msg_home_position_pack(system_id, component_id, msg, home_position->latitude, home_position->longitude, home_position->altitude, home_position->x, home_position->y, home_position->z, home_position->q, home_position->approach_x, home_position->approach_y, home_position->approach_z, home_position->time_usec);
+      |                                                                                                                                                                                                           ~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h: In function 'mavlink_msg_home_position_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h:282:227: warning: taking address of packed member of 'struct __mavlink_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  282 |     return mavlink_msg_home_position_pack_chan(system_id, component_id, chan, msg, home_position->latitude, home_position->longitude, home_position->altitude, home_position->x, home_position->y, home_position->z, home_position->q, home_position->approach_x, home_position->approach_y, home_position->approach_z, home_position->time_usec);
+      |                                                                                                                                                                                                                      ~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h: In function 'mavlink_msg_home_position_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_home_position.h:296:233: warning: taking address of packed member of 'struct __mavlink_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  296 |     return mavlink_msg_home_position_pack_status(system_id, component_id, _status, msg,  home_position->latitude, home_position->longitude, home_position->altitude, home_position->x, home_position->y, home_position->z, home_position->q, home_position->approach_x, home_position->approach_y, home_position->approach_z, home_position->time_usec);
+      |                                                                                                                                                                                                                            ~~~~~~~~~~~~~^~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3075:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h: In function 'mavlink_msg_set_home_position_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h:264:282: warning: taking address of packed member of 'struct __mavlink_set_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  264 |     return mavlink_msg_set_home_position_pack(system_id, component_id, msg, set_home_position->target_system, set_home_position->latitude, set_home_position->longitude, set_home_position->altitude, set_home_position->x, set_home_position->y, set_home_position->z, set_home_position->q, set_home_position->approach_x, set_home_position->approach_y, set_home_position->approach_z, set_home_position->time_usec);
+      |                                                                                                                                                                                                                                                                         ~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h: In function 'mavlink_msg_set_home_position_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h:278:293: warning: taking address of packed member of 'struct __mavlink_set_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  278 |     return mavlink_msg_set_home_position_pack_chan(system_id, component_id, chan, msg, set_home_position->target_system, set_home_position->latitude, set_home_position->longitude, set_home_position->altitude, set_home_position->x, set_home_position->y, set_home_position->z, set_home_position->q, set_home_position->approach_x, set_home_position->approach_y, set_home_position->approach_z, set_home_position->time_usec);
+      |                                                                                                                                                                                                                                                                                    ~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h: In function 'mavlink_msg_set_home_position_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_set_home_position.h:292:299: warning: taking address of packed member of 'struct __mavlink_set_home_position_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  292 |     return mavlink_msg_set_home_position_pack_status(system_id, component_id, _status, msg,  set_home_position->target_system, set_home_position->latitude, set_home_position->longitude, set_home_position->altitude, set_home_position->x, set_home_position->y, set_home_position->z, set_home_position->q, set_home_position->approach_x, set_home_position->approach_y, set_home_position->approach_z, set_home_position->time_usec);
+      |                                                                                                                                                                                                                                                                                          ~~~~~~~~~~~~~~~~~^~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3112:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h: In function 'mavlink_msg_autopilot_state_for_gimbal_device_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h:276:278: warning: taking address of packed member of 'struct __mavlink_autopilot_state_for_gimbal_device_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  276 |     return mavlink_msg_autopilot_state_for_gimbal_device_pack(system_id, component_id, msg, autopilot_state_for_gimbal_device->target_system, autopilot_state_for_gimbal_device->target_component, autopilot_state_for_gimbal_device->time_boot_us, autopilot_state_for_gimbal_device->q, autopilot_state_for_gimbal_device->q_estimated_delay_us, autopilot_state_for_gimbal_device->vx, autopilot_state_for_gimbal_device->vy, autopilot_state_for_gimbal_device->vz, autopilot_state_for_gimbal_device->v_estimated_delay_us, autopilot_state_for_gimbal_device->feed_forward_angular_velocity_z, autopilot_state_for_gimbal_device->estimator_status, autopilot_state_for_gimbal_device->landed_state, autopilot_state_for_gimbal_device->angular_velocity_z);
+      |                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h: In function 'mavlink_msg_autopilot_state_for_gimbal_device_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h:290:289: warning: taking address of packed member of 'struct __mavlink_autopilot_state_for_gimbal_device_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  290 |     return mavlink_msg_autopilot_state_for_gimbal_device_pack_chan(system_id, component_id, chan, msg, autopilot_state_for_gimbal_device->target_system, autopilot_state_for_gimbal_device->target_component, autopilot_state_for_gimbal_device->time_boot_us, autopilot_state_for_gimbal_device->q, autopilot_state_for_gimbal_device->q_estimated_delay_us, autopilot_state_for_gimbal_device->vx, autopilot_state_for_gimbal_device->vy, autopilot_state_for_gimbal_device->vz, autopilot_state_for_gimbal_device->v_estimated_delay_us, autopilot_state_for_gimbal_device->feed_forward_angular_velocity_z, autopilot_state_for_gimbal_device->estimator_status, autopilot_state_for_gimbal_device->landed_state, autopilot_state_for_gimbal_device->angular_velocity_z);
+      |                                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h: In function 'mavlink_msg_autopilot_state_for_gimbal_device_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_autopilot_state_for_gimbal_device.h:304:295: warning: taking address of packed member of 'struct __mavlink_autopilot_state_for_gimbal_device_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  304 |     return mavlink_msg_autopilot_state_for_gimbal_device_pack_status(system_id, component_id, _status, msg,  autopilot_state_for_gimbal_device->target_system, autopilot_state_for_gimbal_device->target_component, autopilot_state_for_gimbal_device->time_boot_us, autopilot_state_for_gimbal_device->q, autopilot_state_for_gimbal_device->q_estimated_delay_us, autopilot_state_for_gimbal_device->vx, autopilot_state_for_gimbal_device->vy, autopilot_state_for_gimbal_device->vz, autopilot_state_for_gimbal_device->v_estimated_delay_us, autopilot_state_for_gimbal_device->feed_forward_angular_velocity_z, autopilot_state_for_gimbal_device->estimator_status, autopilot_state_for_gimbal_device->landed_state, autopilot_state_for_gimbal_device->angular_velocity_z);
+      |                                                                                                                                                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from /Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/common.h:3129:
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h: In function 'mavlink_msg_obstacle_distance_encode':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h:228:156: warning: taking address of packed member of 'struct __mavlink_obstacle_distance_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  228 |     return mavlink_msg_obstacle_distance_pack(system_id, component_id, msg, obstacle_distance->time_usec, obstacle_distance->sensor_type, obstacle_distance->distances, obstacle_distance->increment, obstacle_distance->min_distance, obstacle_distance->max_distance, obstacle_distance->increment_f, obstacle_distance->angle_offset, obstacle_distance->frame);
+      |                                                                                                                                           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h: In function 'mavlink_msg_obstacle_distance_encode_chan':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h:242:167: warning: taking address of packed member of 'struct __mavlink_obstacle_distance_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  242 |     return mavlink_msg_obstacle_distance_pack_chan(system_id, component_id, chan, msg, obstacle_distance->time_usec, obstacle_distance->sensor_type, obstacle_distance->distances, obstacle_distance->increment, obstacle_distance->min_distance, obstacle_distance->max_distance, obstacle_distance->increment_f, obstacle_distance->angle_offset, obstacle_distance->frame);
+      |                                                                                                                                                      ~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h: In function 'mavlink_msg_obstacle_distance_encode_status':
+/Users/blakecourtney/Documents/EE496/mesh_code/drone/mavlink/common/./mavlink_msg_obstacle_distance.h:256:173: warning: taking address of packed member of 'struct __mavlink_obstacle_distance_t' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  256 |     return mavlink_msg_obstacle_distance_pack_status(system_id, component_id, _status, msg,  obstacle_distance->time_usec, obstacle_distance->sensor_type, obstacle_distance->distances, obstacle_distance->increment, obstacle_distance->min_distance, obstacle_distance->max_distance, obstacle_distance->increment_f, obstacle_distance->angle_offset, obstacle_distance->frame);
+      |                                                                                                                                                            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+[7/13] Linking C static library esp-idf/main/libmain.a
+[8/13] Generating esp-idf/esp_system/ld/sections.ld
+[9/13] Linking CXX executable internal_communication.elf
+[10/13] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/internal_communication.bin
+[11/13] cd /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/esp-idf/esptool_py && /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/partition_table/partition-table.bin /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/internal_communication.bin
+internal_communication.bin binary size 0xe2490 bytes. Smallest app partition is 0x100000 bytes. 0x1db70 bytes (12%) free.
+[11/13] cd /Users/blakecourtney/esp/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/blakecourtney/esp/esp-idf -D "SERIAL_TOOL=/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/Users/blakecourtney/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/blakecourtney/Documents/EE496/mesh_code/drone/build -P /Users/blakecourtney/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/cu.usbserial-0001 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 internal_communication.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port /dev/cu.usbserial-0001
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 1c:c3:ab:c4:1f:e0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26304 bytes to 16553...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075e2... (100 %)
+Wrote 26304 bytes (16553 compressed) at 0x00001000 in 0.9 seconds (effective 224.8 kbit/s)...
+Hash of data verified.
+Compressed 926864 bytes to 608873...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d895... (5 %)
+Writing at 0x000289da... (7 %)
+Writing at 0x00032324... (10 %)
+Writing at 0x0003a588... (13 %)
+Writing at 0x0003fb29... (15 %)
+Writing at 0x00044f68... (18 %)
+Writing at 0x0004a2f3... (21 %)
+Writing at 0x0004f966... (23 %)
+Writing at 0x000553c8... (26 %)
+Writing at 0x0005ab88... (28 %)
+Writing at 0x00060407... (31 %)
+Writing at 0x00065c78... (34 %)
+Writing at 0x0006b300... (36 %)
+Writing at 0x000709b6... (39 %)
+Writing at 0x00076190... (42 %)
+Writing at 0x0007b7cb... (44 %)
+Writing at 0x00081112... (47 %)
+Writing at 0x000868fa... (50 %)
+Writing at 0x0008be58... (52 %)
+Writing at 0x0009135d... (55 %)
+Writing at 0x00096fb8... (57 %)
+Writing at 0x0009cf0e... (60 %)
+Writing at 0x000a27c9... (63 %)
+Writing at 0x000a7f57... (65 %)
+Writing at 0x000adc26... (68 %)
+Writing at 0x000b33ee... (71 %)
+Writing at 0x000b8623... (73 %)
+Writing at 0x000bd9a8... (76 %)
+Writing at 0x000c2c2a... (78 %)
+Writing at 0x000c7d6f... (81 %)
+Writing at 0x000cd05c... (84 %)
+Writing at 0x000d2903... (86 %)
+Writing at 0x000daff0... (89 %)
+Writing at 0x000e089a... (92 %)
+Writing at 0x000e6593... (94 %)
+Writing at 0x000ebe1c... (97 %)
+Writing at 0x000f12f5... (100 %)
+Wrote 926864 bytes (608873 compressed) at 0x00010000 in 15.7 seconds (effective 471.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 225.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

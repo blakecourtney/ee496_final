@@ -1,0 +1,557 @@
+Command: cmake -G Ninja -B /home/blakecourtney/school/s26/EE496/mesh_code/drone/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/blakecourtney/.espressif/python_env/idf6.1_py3.12_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/blakecourtney/school/s26/EE496/mesh_code/drone
+Configuration Report                                                                                                                                                                    
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                                                                                                                                    
+   Verbosity: default                                                                                                                                                                   
+   Defaults policy: sdkconfig                                                                                                                                                           
+   Status: Finished with notifications                                                                                                                                                  
+                                                                                                                                                                                        
+  Disabled Symbols/Choices With User-Set Value                                                                                                                                          
+   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   
+    * SOC_CAPS_ECO_VER_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:6) with user-set value 301 from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:10) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_DAC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:14) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_UART_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:18) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_MCPWM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:22) with user-set value y from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPTIMER_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:26) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SDMMC_HOST_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:30) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:34) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4      
+    * SOC_PCNT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:38) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_PHY_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:42) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_WIFI_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:46) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_SDIO_SLAVE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:50) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TWAI_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:54) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_EFUSE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:58) with user-set value y from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_EMAC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:62) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_ULP_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:66) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_CCOMP_TIMER_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:70) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTC_FAST_MEM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:74) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTC_SLOW_MEM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:78) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTC_MEM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:82) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:90) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_LCD_I80_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:98) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RMT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:102) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_SDM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:106) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_GPSPI_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:110) with user-set value y from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:114) with user-set value y from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2C_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:118) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_SUPPORT_COEXISTENCE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:122) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_AES_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:126) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_MPI_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:130) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_SHA_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:134) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_FLASH_ENC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:138) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SECURE_BOOT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:142) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_SENSOR_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:146) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BOD_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:150) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_ULP_FSM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:154) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_TREE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:158) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MPU_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:162) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_WDT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:166) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_SPI_FLASH_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:170) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RNG_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:174) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_LIGHT_SLEEP_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:178) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_DEEP_SLEEP_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:182) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LP_PERIPH_SHARE_INTERRUPT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:186) with user-set value y from                  
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:190) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_DPORT_WORKAROUND_DIS_INTERRUPT_LVL (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:198) with user-set value 5 from         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_XTAL_SUPPORT_26M (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:202) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_XTAL_SUPPORT_40M (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:206) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_RTC_CTRL_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:210) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIG_CTRL_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:214) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DMA_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:218) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_PERIPH_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:222) with user-set value 2 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_MAX_CHANNEL_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:226) with user-set value 10 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_ATTEN_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:230) with user-set value 4 from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_ADC_DIGI_CONTROLLER_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:234) with user-set value 2 from                    
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_PATT_LEN_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:238) with user-set value 16 from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIGI_MIN_BITWIDTH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:242) with user-set value 9 from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIGI_MAX_BITWIDTH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:246) with user-set value 12 from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIGI_RESULT_BYTES (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:250) with user-set value 2 from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIGI_DATA_BYTES_PER_CONV (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:254) with user-set value 4 from               
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_DIGI_MONITOR_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:258) with user-set value 0 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_SAMPLE_FREQ_THRES_HIGH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:262) with user-set value 2 from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_SAMPLE_FREQ_THRES_LOW (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:266) with user-set value 20 from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_RTC_MIN_BITWIDTH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:270) with user-set value 9 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_RTC_MAX_BITWIDTH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:274) with user-set value 12 from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ADC_SHARED_POWER (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:278) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BROWNOUT_RESET_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:282) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHARED_IDCACHE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:286) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_IDCACHE_PER_CORE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:290) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CPU_CORES_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:294) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_CPU_INTR_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:298) with user-set value 32 from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_CPU_HAS_FPU (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:302) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4      
+    * SOC_HP_CPU_HAS_MULTIPLE_CORES (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:306) with user-set value y from                  
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CPU_BREAKPOINTS_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:310) with user-set value 2 from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CPU_WATCHPOINTS_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:314) with user-set value 2 from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CPU_WATCHPOINT_MAX_REGION_SIZE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:318) with user-set value 0x40 from          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_DAC_CHAN_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:322) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4     
+    * SOC_DAC_RESOLUTION (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:326) with user-set value 8 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_DAC_DMA_16BIT_ALIGN (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:330) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_PORT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:334) with user-set value 1 from /tmp/kconfgen_tmpoxoxfnn4        
+    * SOC_GPIO_PIN_COUNT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:338) with user-set value 40 from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_VALID_GPIO_MASK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:342) with user-set value 0xFFFFFFFFFF from            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_IN_RANGE_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:346) with user-set value 39 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_OUT_RANGE_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:350) with user-set value 33 from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_VALID_DIGITAL_IO_PAD_MASK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:354) with user-set value 0xEF0FEA from      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_CLOCKOUT_BY_IO_MUX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:358) with user-set value y from                    
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_GPIO_CLOCKOUT_CHANNEL_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:362) with user-set value 3 from                  
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2C_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:366) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4          
+    * SOC_HP_I2C_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:370) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4       
+    * SOC_I2C_SUPPORT_APB (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:374) with user-set value y from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2C_SUPPORT_10BIT_ADDR (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:378) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2C_SUPPORT_SLAVE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:382) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2C_STOP_INDEPENDENT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:386) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_HW_VERSION_1 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:390) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_APLL (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:394) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_PDM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:398) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_PDM_TX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:402) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_PCM2PDM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:406) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_PDM_RX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:410) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_SUPPORTS_PDM2PCM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:414) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_PDM_MAX_TX_LINES (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:418) with user-set value 1 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_I2S_PDM_MAX_RX_LINES (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:422) with user-set value 1 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_HAS_TIMER_SPECIFIC_MUX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:426) with user-set value y from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_SUPPORT_APB_CLOCK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:430) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_SUPPORT_REF_TICK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:434) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_SUPPORT_HS_MODE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:438) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_TIMER_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:442) with user-set value 4 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_CHANNEL_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:446) with user-set value 8 from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LEDC_TIMER_BIT_WIDTH (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:450) with user-set value 20 from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MMU_PERIPH_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:454) with user-set value 2 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MMU_LINEAR_ADDRESS_REGION_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:458) with user-set value 3 from              
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MPU_MIN_REGION_SIZE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:466) with user-set value 0x20000000 from               
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MPU_REGIONS_MAX_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:470) with user-set value 8 from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RMT_MEM_WORDS_PER_CHANNEL (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:482) with user-set value 64 from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTCIO_PIN_COUNT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:486) with user-set value 18 from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTCIO_INPUT_OUTPUT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:490) with user-set value y from               
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTCIO_HOLD_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:494) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTCIO_WAKE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:498) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SPI_PERIPH_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:502) with user-set value 3 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SPI_HD_BOTH_INOUT_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:506) with user-set value y from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SPI_MAXIMUM_BUFFER_SIZE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:510) with user-set value 64 from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LP_TIMER_BIT_WIDTH_LO (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:514) with user-set value 32 from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_LP_TIMER_BIT_WIDTH_HI (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:518) with user-set value 16 from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_SENSOR_VERSION (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:526) with user-set value 1 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_MIN_CHAN_ID (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:530) with user-set value 0 from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_MAX_CHAN_ID (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:534) with user-set value 9 from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_SUPPORT_SLEEP_WAKEUP (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:538) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TOUCH_SAMPLE_CFG_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:542) with user-set value 1 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TWAI_CONTROLLER_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:546) with user-set value 1 from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_TWAI_MASK_FILTER_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:550) with user-set value 1 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_UART_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:554) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4         
+    * SOC_UART_HP_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:558) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4      
+    * SOC_UART_SUPPORT_APB_CLK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:562) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_UART_SUPPORT_REF_TICK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:566) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_UART_FIFO_LEN (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:570) with user-set value 128 from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_UART_BITRATE_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:574) with user-set value 5000000 from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_UART_WAKEUP_SUPPORT_ACTIVE_THRESH_MODE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:578) with user-set value y from     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SPIRAM_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:582) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SPI_MEM_SUPPORT_CONFIG_GPIO_BY_EFUSE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:586) with user-set value y from       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_SUPPORT_PARALLEL_ENG (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:590) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_ENDIANNESS_BE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:594) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_SUPPORT_SHA1 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:598) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_SUPPORT_SHA256 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:602) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_SUPPORT_SHA384 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:606) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SHA_SUPPORT_SHA512 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:610) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MPI_MEM_BLOCKS_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:614) with user-set value 4 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_MPI_OPERATIONS_NUM (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:618) with user-set value 1 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RSA_MAX_BIT_LEN (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:622) with user-set value 4096 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_AES_SUPPORT_AES_128 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:626) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_AES_SUPPORT_AES_192 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:630) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_AES_SUPPORT_AES_256 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:634) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SECURE_BOOT_V1 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:638) with user-set value y from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_EFUSE_SECURE_BOOT_KEY_DIGESTS (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:642) with user-set value 1 from              
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_FLASH_ENCRYPTED_XTS_AES_BLOCK_MAX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:646) with user-set value 32 from         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PHY_DIG_REGS_MEM_SIZE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:650) with user-set value 21 from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_EXT0_WAKEUP (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:654) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_EXT1_WAKEUP (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:658) with user-set value y from                     
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_EXT_WAKEUP (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:662) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_TOUCH_SENSOR_WAKEUP (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:666) with user-set value y from             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_RTC_PERIPH_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:670) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_RTC_FAST_MEM_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:674) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_RTC_SLOW_MEM_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:678) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_RC_FAST_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:682) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_VDDSDIO_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:686) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_SUPPORT_MODEM_PD (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:690) with user-set value y from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CONFIGURABLE_VDDSDIO_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:694) with user-set value y from             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_PM_MODEM_PD_BY_SW (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:698) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_APLL_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:702) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_RC_FAST_D256_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:706) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_RTC_SLOW_CLK_SUPPORT_RC_FAST_D256 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:710) with user-set value y from          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_RC_FAST_SUPPORT_CALIBRATION (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:714) with user-set value y from            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_XTAL32K_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:718) with user-set value y from                      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_CLK_LP_FAST_SUPPORT_XTAL_D4 (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:722) with user-set value y from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SDMMC_USE_IOMUX (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:726) with user-set value y from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_SDMMC_NUM_SLOTS (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:730) with user-set value 2 from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_WIFI_WAPI_SUPPORT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:738) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_WIFI_CSI_SUPPORT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:742) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_WIFI_MESH_SUPPORT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:746) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_WIFI_SUPPORT_VARIABLE_BEACON_WINDOW (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:750) with user-set value y from        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_WIFI_NAN_SUPPORT (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:754) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BLE_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:758) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4    
+    * SOC_BLE_MESH_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:762) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BT_CLASSIC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:766) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BLUFI_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:774) with user-set value y from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BT_H2C_ENC_KEY_CTRL_ENH_VSC_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:778) with user-set value y from      
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_BLE_MULTI_CONN_OPTIMIZATION (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:782) with user-set value y from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_ULP_HAS_ADC (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:786) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4      
+    * SOC_PHY_COMBO_MODULE (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:790) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SOC_EMAC_RMII_CLK_OUT_INTERNAL_LOOPBACK (defined at /home/blakecourtney/esp/esp-idf/./components/soc/esp32/include/soc/Kconfig.soc_caps.in:794) with user-set value y from        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * IDF_CMAKE (defined at /home/blakecourtney/esp/esp-idf/Kconfig:9) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                                             
+    * IDF_TOOLCHAIN (defined at /home/blakecourtney/esp/esp-idf/Kconfig:39) with user-set value gcc from /tmp/kconfgen_tmpoxoxfnn4                                                      
+    * IDF_TOOLCHAIN_GCC (defined at /home/blakecourtney/esp/esp-idf/Kconfig:51) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                                    
+    * IDF_TARGET_ARCH_XTENSA (defined at /home/blakecourtney/esp/esp-idf/Kconfig:59) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                               
+    * IDF_TARGET_ARCH (defined at /home/blakecourtney/esp/esp-idf/Kconfig:63) with user-set value xtensa from /tmp/kconfgen_tmpoxoxfnn4                                                 
+    * IDF_TARGET (defined at /home/blakecourtney/esp/esp-idf/Kconfig:68) with user-set value esp32 from /tmp/kconfgen_tmpoxoxfnn4                                                       
+    * IDF_INIT_VERSION (defined at /home/blakecourtney/esp/esp-idf/Kconfig:76) with user-set value 6.1.0 from /tmp/kconfgen_tmpoxoxfnn4                                                 
+    * IDF_TARGET_ESP32 (defined at /home/blakecourtney/esp/esp-idf/Kconfig:82) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                                     
+    * IDF_FIRMWARE_CHIP_ID (defined at /home/blakecourtney/esp/esp-idf/Kconfig:164) with user-set value 0x0000 from /tmp/kconfgen_tmpoxoxfnn4                                           
+    * APP_BUILD_GENERATE_BINARIES (defined at /home/blakecourtney/esp/esp-idf/Kconfig:262) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                         
+    * APP_BUILD_BOOTLOADER (defined at /home/blakecourtney/esp/esp-idf/Kconfig:265) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                                
+    * APP_BUILD_USE_FLASH_SECTIONS (defined at /home/blakecourtney/esp/esp-idf/Kconfig:278) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                        
+    * BOOTLOADER_OFFSET_IN_FLASH (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.projbuild:7) with user-set value 0x1000 from /tmp/kconfgen_tmpoxoxfnn4       
+    * BOOTLOADER_LOG_VERSION (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.log:17) with user-set value 1 from /tmp/kconfgen_tmpoxoxfnn4                     
+    * BOOTLOADER_LOG_LEVEL (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.log:44) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4                       
+    * BOOTLOADER_LOG_MODE_TEXT_EN (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.log.settings:3) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4        
+    * BOOTLOADER_RESERVE_RTC_SIZE (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.projbuild:386) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4         
+    * SECURE_BOOT_V1_SUPPORTED (defined at /home/blakecourtney/esp/esp-idf/components/bootloader/Kconfig.projbuild:482) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4            
+    * ESP_ROM_HAS_CRC_LE (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:6) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4            
+    * ESP_ROM_HAS_CRC_BE (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:10) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4           
+    * ESP_ROM_HAS_MZ_CRC32 (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:14) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4         
+    * ESP_ROM_HAS_JPEG_DECODE (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:18) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4      
+    * ESP_ROM_HAS_UART_BUF_SWITCH (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:22) with user-set value y from                            
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_NEEDS_SWSETUP_WORKAROUND (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:26) with user-set value y from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_HAS_NEWLIB (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:30) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4           
+    * ESP_ROM_HAS_NEWLIB_NANO_FORMAT (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:34) with user-set value y from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_HAS_NEWLIB_32BIT_TIME (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:38) with user-set value y from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_HAS_SW_FLOAT (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:42) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4         
+    * ESP_ROM_USB_OTG_NUM (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:46) with user-set value -1 from /tmp/kconfgen_tmpoxoxfnn4         
+    * ESP_ROM_USB_SERIAL_DEVICE_NUM (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:50) with user-set value -1 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_SUPPORT_DEEP_SLEEP_WAKEUP_STUB (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:54) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_ROM_HAS_OUTPUT_PUTC_FUNC (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/./esp32//Kconfig.soc_caps.in:58) with user-set value y from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESPTOOLPY_FLASHMODE (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:79) with user-set value dio from /tmp/kconfgen_tmpoxoxfnn4                
+    * ESPTOOLPY_FLASHFREQ (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:104) with user-set value 40m from /tmp/kconfgen_tmpoxoxfnn4               
+    * ESPTOOLPY_FLASHSIZE (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:147) with user-set value 2MB from /tmp/kconfgen_tmpoxoxfnn4               
+    * ESPTOOLPY_BEFORE (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:186) with user-set value default_reset from /tmp/kconfgen_tmpoxoxfnn4        
+    * ESPTOOLPY_AFTER (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:207) with user-set value hard_reset from /tmp/kconfgen_tmpoxoxfnn4            
+    * ESPTOOLPY_MONITOR_BAUD (defined at /home/blakecourtney/esp/esp-idf/components/esptool_py/Kconfig.projbuild:212) with user-set value 115200 from /tmp/kconfgen_tmpoxoxfnn4         
+    * PARTITION_TABLE_CUSTOM_FILENAME (defined at /home/blakecourtney/esp/esp-idf/components/partition_table/Kconfig.projbuild:129) with user-set value partitions.csv from             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * PARTITION_TABLE_FILENAME (defined at /home/blakecourtney/esp/esp-idf/components/partition_table/Kconfig.projbuild:137) with user-set value partitions_singleapp.csv from          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * MESH_TOPOLOGY (defined at /home/blakecourtney/school/s26/EE496/mesh_code/drone/main/Kconfig.projbuild:15) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4                    
+    * MESH_AP_AUTHMODE (defined at /home/blakecourtney/school/s26/EE496/mesh_code/drone/main/Kconfig.projbuild:137) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4                
+    * COMPILER_OPTIMIZATION_ASSERTION_LEVEL (defined at /home/blakecourtney/esp/esp-idf/Kconfig:466) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4                               
+    * COMPILER_RT_LIB_NAME (defined at /home/blakecourtney/esp/esp-idf/Kconfig:686) with user-set value gcc from /tmp/kconfgen_tmpoxoxfnn4                                              
+    * EFUSE_MAX_BLK_LEN (defined at /home/blakecourtney/esp/esp-idf/components/efuse/Kconfig:66) with user-set value 192 from /tmp/kconfgen_tmpoxoxfnn4                                 
+    * ESP_COEX_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/esp_coex/Kconfig:4) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                  
+    * ESP32_REV_MIN (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:30) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4      
+    * ESP32_REV_MIN_FULL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:38) with user-set value 0 from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_REV_MIN_FULL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:47) with user-set value 0 from                             
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP32_REV_MAX_FULL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:61) with user-set value 399 from                         
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_REV_MAX_FULL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:66) with user-set value 399 from                           
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_EFUSE_BLOCK_REV_MAX_FULL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.hw_support:81) with user-set value 99 from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_MAC_ADDR_UNIVERSE_WIFI_STA (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:27) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4             
+    * ESP_MAC_ADDR_UNIVERSE_WIFI_AP (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:30) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4              
+    * ESP_MAC_ADDR_UNIVERSE_BT (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:33) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                   
+    * ESP_MAC_ADDR_UNIVERSE_ETH (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:36) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                  
+    * ESP_MAC_UNIVERSAL_MAC_ADDRESSES_FOUR (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:48) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4       
+    * ESP_MAC_UNIVERSAL_MAC_ADDRESSES (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:51) with user-set value 4 from /tmp/kconfgen_tmpoxoxfnn4            
+    * ESP32_UNIVERSAL_MAC_ADDRESSES (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.mac:35) with user-set value 4 from                       
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_SLEEP_RTC_BUS_ISO_WORKAROUND (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:138) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4          
+    * XTAL_FREQ (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./port/esp32/Kconfig.xtal:25) with user-set value 40 from /tmp/kconfgen_tmpoxoxfnn4               
+    * ESP_BROWNOUT_DET_LVL (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./power_supply/port/esp32/Kconfig.power:43) with user-set value 0 from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_BROWNOUT_USE_INTR (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/./power_supply/port/esp32/Kconfig.power:54) with user-set value y from                
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_INTR_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_hw_support/Kconfig:403) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                          
+    * LIBC_MISC_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_libc/Kconfig:45) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                
+    * ESP_NETIF_USES_TCPIP_WITH_BSD_API (defined at /home/blakecourtney/esp/esp-idf/components/esp_netif/Kconfig:52) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4               
+    * ESP_NETIF_RECEIVE_REPORT_ERRORS (defined at /home/blakecourtney/esp/esp-idf/components/esp_netif/Kconfig:62) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                 
+    * ESP_PHY_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/esp_phy/Kconfig:3) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                    
+    * ESP_PHY_MAX_TX_POWER (defined at /home/blakecourtney/esp/esp-idf/components/esp_phy/Kconfig:92) with user-set value 20 from /tmp/kconfgen_tmpoxoxfnn4                             
+    * ESP_PHY_CALIBRATION_MODE (defined at /home/blakecourtney/esp/esp-idf/components/esp_phy/Kconfig:154) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4                         
+    * ESP_ROM_PRINT_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_rom/Kconfig:3) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                              
+    * ESP_CONSOLE_UART (defined at /home/blakecourtney/esp/esp-idf/components/esp_stdio/Kconfig:63) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                
+    * ESP_CONSOLE_UART_NUM (defined at /home/blakecourtney/esp/esp-idf/components/esp_stdio/Kconfig:87) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4                            
+    * ESP_CONSOLE_ROM_SERIAL_PORT_NUM (defined at /home/blakecourtney/esp/esp-idf/components/esp_stdio/Kconfig:94) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4                 
+    * ESP_CONSOLE_UART_BAUDRATE (defined at /home/blakecourtney/esp/esp-idf/components/esp_stdio/Kconfig:150) with user-set value 115200 from /tmp/kconfgen_tmpoxoxfnn4                 
+    * ESP_DEFAULT_CPU_FREQ_MHZ (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/./port/soc/esp32/Kconfig.cpu:19) with user-set value 160 from                          
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP32_TRACEMEM_RESERVE_DRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/./port/soc/esp32/Kconfig.tracemem:33) with user-set value 0x0 from                  
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * ESP_SYSTEM_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/Kconfig:12) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                             
+    * ESP_MAIN_TASK_AFFINITY (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/Kconfig:257) with user-set value 0x0 from /tmp/kconfgen_tmpoxoxfnn4                      
+    * ESP_IPC_ENABLE (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/Kconfig:477) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                
+    * ESP_IPC_ISR_ENABLE (defined at /home/blakecourtney/esp/esp-idf/components/esp_system/Kconfig:502) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                            
+    * ESP_TIMER_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/esp_timer/Kconfig:3) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                
+    * ESP_TIME_FUNCS_USE_RTC_TIMER (defined at /home/blakecourtney/esp/esp-idf/components/esp_timer/Kconfig:16) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                    
+    * ESP_TIME_FUNCS_USE_ESP_TIMER (defined at /home/blakecourtney/esp/esp-idf/components/esp_timer/Kconfig:19) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                    
+    * ESP_TIMER_TASK_AFFINITY (defined at /home/blakecourtney/esp/esp-idf/components/esp_timer/Kconfig:54) with user-set value 0x0 from /tmp/kconfgen_tmpoxoxfnn4                       
+    * ESP_TIMER_IMPL_TG0_LAC (defined at /home/blakecourtney/esp/esp-idf/components/esp_timer/Kconfig:115) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                         
+    * ESP_WIFI_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/esp_wifi/Kconfig:4) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                  
+    * ESP_WIFI_TX_BUFFER_TYPE (defined at /home/blakecourtney/esp/esp-idf/components/esp_wifi/Kconfig:84) with user-set value 1 from /tmp/kconfgen_tmpoxoxfnn4                          
+    * ESP_WIFI_DYNAMIC_RX_MGMT_BUF (defined at /home/blakecourtney/esp/esp-idf/components/esp_wifi/Kconfig:150) with user-set value 0 from /tmp/kconfgen_tmpoxoxfnn4                    
+    * FREERTOS_TIMER_SERVICE_TASK_CORE_AFFINITY (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:204) with user-set value 0x7FFFFFFF from                        
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * FREERTOS_TICK_SUPPORT_CORETIMER (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:458) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                 
+    * FREERTOS_SYSTICK_USES_CCOUNT (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:511) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                    
+    * FREERTOS_PORT (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:603) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                   
+    * FREERTOS_NO_AFFINITY (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:608) with user-set value 0x7FFFFFFF from /tmp/kconfgen_tmpoxoxfnn4                   
+    * FREERTOS_SUPPORT_STATIC_ALLOCATION (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:616) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4              
+    * FREERTOS_DEBUG_OCDAWARE (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:623) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                         
+    * FREERTOS_NUMBER_OF_CORES (defined at /home/blakecourtney/esp/esp-idf/components/freertos/Kconfig:628) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4                        
+    * HAL_DEFAULT_ASSERTION_LEVEL (defined at /home/blakecourtney/esp/esp-idf/components/hal/Kconfig:27) with user-set value 2 from /tmp/kconfgen_tmpoxoxfnn4                           
+    * LOG_VERSION (defined at /home/blakecourtney/esp/esp-idf/components/log/Kconfig:42) with user-set value 1 from /tmp/kconfgen_tmpoxoxfnn4                                           
+    * LOG_DEFAULT_LEVEL (defined at /home/blakecourtney/esp/esp-idf/components/log/./Kconfig.level:32) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4                             
+    * LOG_MAXIMUM_LEVEL (defined at /home/blakecourtney/esp/esp-idf/components/log/./Kconfig.level:78) with user-set value 3 from /tmp/kconfgen_tmpoxoxfnn4                             
+    * LOG_MODE_TEXT_EN (defined at /home/blakecourtney/esp/esp-idf/components/log/./Kconfig.settings:3) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                            
+    * LOG_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/log/Kconfig:55) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                           
+    * LWIP_TCPIP_TASK_AFFINITY (defined at /home/blakecourtney/esp/esp-idf/components/lwip/Kconfig:920) with user-set value 0x7FFFFFFF from /tmp/kconfgen_tmpoxoxfnn4                   
+    * MBEDTLS_TLS_SERVER (defined at /home/blakecourtney/esp/esp-idf/components/mbedtls/Kconfig:589) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                               
+    * MBEDTLS_TLS_CLIENT (defined at /home/blakecourtney/esp/esp-idf/components/mbedtls/Kconfig:592) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                               
+    * PTHREAD_TASK_CORE_DEFAULT (defined at /home/blakecourtney/esp/esp-idf/components/pthread/Kconfig:37) with user-set value -1 from /tmp/kconfgen_tmpoxoxfnn4                        
+    * MMU_PAGE_SIZE_64KB (defined at /home/blakecourtney/esp/esp-idf/components/soc/Kconfig:25) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                                    
+    * MMU_PAGE_MODE (defined at /home/blakecourtney/esp/esp-idf/components/soc/Kconfig:30) with user-set value 64KB from /tmp/kconfgen_tmpoxoxfnn4                                      
+    * MMU_PAGE_SIZE (defined at /home/blakecourtney/esp/esp-idf/components/soc/Kconfig:37) with user-set value 0x10000 from /tmp/kconfgen_tmpoxoxfnn4                                   
+    * SPI_FLASH_BROWNOUT_RESET (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/Kconfig:16) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4                        
+    * SPI_FLASH_PLACE_FUNCTIONS_IN_IRAM (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/Kconfig:178) with user-set value y from /tmp/kconfgen_tmpoxoxfnn4              
+    * SPI_FLASH_VENDOR_XMC_SUPPORT_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/./esp32/Kconfig.soc_caps.in:6) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SPI_FLASH_VENDOR_GD_SUPPORT_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/./esp32/Kconfig.soc_caps.in:10) with user-set value y from                   
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SPI_FLASH_VENDOR_ISSI_SUPPORT_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/./esp32/Kconfig.soc_caps.in:14) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SPI_FLASH_VENDOR_MXIC_SUPPORT_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/./esp32/Kconfig.soc_caps.in:18) with user-set value y from                 
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+    * SPI_FLASH_VENDOR_WINBOND_SUPPORT_ENABLED (defined at /home/blakecourtney/esp/esp-idf/components/spi_flash/./esp32/Kconfig.soc_caps.in:22) with user-set value y from              
+    /tmp/kconfgen_tmpoxoxfnn4                                                                                                                                                           
+   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+CMake Warning at /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/blakecourtney/esp/esp-idf/components/esp_wifi/wifi_apps/roaming_app/include'
+  belongs to component esp_wifi but is being used by component
+  wpa_supplicant.  It is recommended to define the component dependency for
+  wpa_supplicant on the component esp_wifi, i.e.  'idf_component_register(...
+  PRIV_REQUIRES esp_wifi)' in the CMakeLists.txt of wpa_supplicant, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component esp_wifi.
+Call Stack (most recent call first):
+  /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/blakecourtney/esp/esp-idf/CMakeLists.txt:353 (__component_validation_run_checks)
+
+
+CMake Warning at /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/blakecourtney/esp/esp-idf/components/esp_wifi/wifi_apps/roaming_app/src'
+  belongs to component esp_wifi but is being used by component
+  wpa_supplicant.  It is recommended to define the component dependency for
+  wpa_supplicant on the component esp_wifi, i.e.  'idf_component_register(...
+  PRIV_REQUIRES esp_wifi)' in the CMakeLists.txt of wpa_supplicant, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component esp_wifi.
+Call Stack (most recent call first):
+  /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/blakecourtney/esp/esp-idf/CMakeLists.txt:353 (__component_validation_run_checks)
+
+
+CMake Warning at /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/blakecourtney/esp/esp-idf/components/wpa_supplicant/src' belongs to
+  component wpa_supplicant but is being used by component esp_wifi.  It is
+  recommended to define the component dependency for esp_wifi on the
+  component wpa_supplicant, i.e.  'idf_component_register(...  PRIV_REQUIRES
+  wpa_supplicant)' in the CMakeLists.txt of esp_wifi, and specify the
+  included directory as idf_component_register(...  PRIV_INCLUDE_DIRS <dir
+  relative to component>) in the CMakeLists.txt of component wpa_supplicant.
+Call Stack (most recent call first):
+  /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/blakecourtney/esp/esp-idf/CMakeLists.txt:353 (__component_validation_run_checks)
+
+
+CMake Warning at /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/blakecourtney/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src'
+  belongs to component wpa_supplicant but is being used by component
+  esp_wifi.  It is recommended to define the component dependency for
+  esp_wifi on the component wpa_supplicant, i.e.  'idf_component_register(...
+  PRIV_REQUIRES wpa_supplicant)' in the CMakeLists.txt of esp_wifi, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component wpa_supplicant.
+Call Stack (most recent call first):
+  /home/blakecourtney/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/blakecourtney/esp/esp-idf/CMakeLists.txt:353 (__component_validation_run_checks)
+
+

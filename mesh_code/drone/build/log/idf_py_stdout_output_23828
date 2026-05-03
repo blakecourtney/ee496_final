@@ -1,0 +1,1348 @@
+Command: /Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/blakecourtney/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/internal_communication.elf /Users/blakecourtney/Documents/EE496/mesh_code/drone/build/bootloader/bootloader.elf -m '/Users/blakecourtney/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/Users/blakecourtney/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 27 2026 18:40:30[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22394h (140180) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=000323bc vaddr=3ffb0000 size=03e98h ( 16024) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0003625c vaddr=40080000 size=09dbch ( 40380) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a53c8h (676808) map[0m
+[0;32mI (388) esp_image: segment 4: paddr=000e53f0 vaddr=40089dbc size=0cfd4h ( 53204) load[0m
+[0;32mI (409) esp_image: segment 5: paddr=000f23cc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (420) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (420) boot: Disabling RNG early entropy source...[0m
+[0;32mI (430) cpu_start: Multicore app[0m
+[0;32mI (439) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (439) cpu_start: Pro cpu start user code[0m
+[0;32mI (439) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (441) app_init: Application information:[0m
+[0;32mI (445) app_init: Project name:     internal_communication[0m
+[0;32mI (450) app_init: App version:      a6f5078-dirty[0m
+[0;32mI (454) app_init: Compile time:     Apr 27 2026 18:40:24[0m
+[0;32mI (459) app_init: ELF file SHA256:  d9b3d9bd9...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (471) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (475) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (479) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (485) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFB9CB0 len 00026350 (152 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40096D90 len 00009270 (36 KiB): IRAM[0m
+[0;32mI (513) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (532) main_task: Started on CPU0[0m
+[0;32mI (542) main_task: Calling app_main()[0m
+[0;32mI (542) mesh_main: image buffer allocated (115200 bytes)[0m
+[0;32mI (582) wifi:wifi driver task: 3ffdeefc, prio:23, stack:6656, core=0[0m
+[0;32mI (592) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (592) wifi:wifi certification version: v7.0[0m
+[0;32mI (592) wifi:config NVS flash: enabled[0m
+[0;32mI (592) wifi:config nano formatting: disabled[0m
+[0;32mI (602) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (602) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (612) wifi:Init management short buffer num: 32[0m
+[0;32mI (612) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (622) wifi:Init static rx buffer num: 10[0m
+[0;32mI (622) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (632) wifi_init: rx ba win: 6[0m
+[0;32mI (632) wifi_init: accept mbox: 6[0m
+[0;32mI (632) wifi_init: tcpip mbox: 32[0m
+[0;32mI (642) wifi_init: udp mbox: 6[0m
+[0;32mI (642) wifi_init: tcp mbox: 6[0m
+[0;32mI (642) wifi_init: tcp tx win: 5760[0m
+[0;32mI (642) wifi_init: tcp rx win: 5760[0m
+[0;32mI (652) wifi_init: tcp mss: 1440[0m
+[0;32mI (652) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (652) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (662) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (742) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;32mI (742) wifi:enable tsf[0m
+[0;32mI (742) wifi:Total power save buffer number: 16[0m
+[0;32mI (742) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (742) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (762) mesh: <nvs>read layer:0[0m
+[0;32mI (762) mesh: <nvs>read assoc:0[0m
+[0;32mI (762) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (762) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (772) wifi:Total power save buffer number: 16[0m
+[0;32mI (1032) mesh_main: MAVLink UART initialized[0m
+[0;32mI (1032) mesh_main: ML UART initialized[0m
+[0;32mI (1032) mesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1042) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1052) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1052) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1052) mesh_main: DRONE NODE STARTED heap:30832[0m
+[0;32mI (1062) main_task: Returned from app_main()[0m
+[0;32mI (1352) mesh: [S1]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-45[0m
+[0;32mI (1352) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-45, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1362) mesh: find root:ESPM_C47ED4, root_cap:1(max:10), new channel:6, old channel:0[0m
+[0;32mI (1362) mesh: [FIND][ch:6]AP:21, otherID:0, MAP:1, idle:0, candidate:0, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1372) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1382) mesh_main: unknown event id:22[0m
+[0;32mI (1382) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (1392) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1402) wifi:Total power save buffer number: 16[0m
+[0;32mI (1402) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1412) wifi:Init max length of beacon: 752/752[0m
+[0;33mW (1422) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1432) wifi:Total power save buffer number: 16[0m
+[0;32mI (1732) mesh: [SCAN][ch:6]AP:26, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1732) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1742) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-21, 1c:c3:ab:c4:7e:d5[layer:1, assoc:0], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1762) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (1802) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (1802) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1812) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1832) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1832) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (1842) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:1[0m
+[0;32mI (1842) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (1852) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (1852) wifi:connected with ESPM_C47ED4, aid = 1, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (1862) wifi:security: WPA2-PSK, phy: bgn, rssi: -21[0m
+[0;32mI (1872) wifi:pm start, type: 0[0m
+
+[0;32mI (1872) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (1892) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:5658ms, retries:1<normal connected>[0m
+[0;32mI (1892) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (1892) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (1892) mesh_main: unknown event id:11[0m
+[0;32mI (1922) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2102) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (3922) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (5922) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (7682) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-29, assoc:0(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (7932) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (9182) mesh: 5966<scan>parent layer:1, rssi:-23, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (9182) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (9192) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (9202) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-23[0m
+[0;32mI (9212) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:6964ms, retries:2<>[0m
+[0;32mI (9942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (11942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (13942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (15942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (16352) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-23, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (17852) mesh: 5966<scan>parent layer:1, rssi:-26, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (17852) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (17862) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (17872) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-26[0m
+[0;32mI (17872) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:12059ms, retries:3<>[0m
+[0;32mI (17942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (19942) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (21952) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (23952) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (30232) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-23, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;33mW (31732) wifi:scan number is 0[0m
+[0;32mI (31732) mesh: [SCAN][ch:6]AP:0, other(ID:0, RD:0), MAP:0, idle:0, candidate:0, root:0, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (31742) mesh: [FAIL][1]root:0, fail:1, normal:0, <pre>backoff:0[weak][0m
+
+[0;32mI (31742) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:310820ms, retries:3<>[0m
+[0;32mI (33302) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (35262) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (35422) wifi:MIC mismatch for the Bcast Mgmt frame(res=22)[0m
+[0;32mI (35812) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (35812) wifi:state: run -> init (0xc800)[0m
+[0;32mI (35822) wifi:pm stop, total sleep time: 0 us / 33947808 us[0m
+
+[0;32mI (35822) wifi:<ba-del>idx:0, tid:5[0m
+[0;32mI (35822) wifi:new:<6,0>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (35832) mesh_main: <MESH_EVENT_PARENT_DISCONNECTED>reason:200[0m
+[0;32mI (35832) mesh: [wifi]disconnected reason:200(beacon timeout), continuous:1/max:12, non-root, vote(,stopped)<><>[0m
+[0;32mI (35842) wifi:new:<6,1>, old:<6,0>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (35852) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (37062) wifi:state: auth -> init (0x200)[0m
+[0;32mI (37072) wifi:new:<6,0>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (37072) mesh_main: <MESH_EVENT_PARENT_DISCONNECTED>reason:2[0m
+[0;32mI (37072) mesh: [wifi]disconnected reason:2(auth expire), continuous:2/max:12, non-root, vote(,stopped)<><>[0m
+[0;32mI (37082) wifi:new:<6,1>, old:<6,0>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (37092) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (37122) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[1;31mE (37122) mesh_main: [DRONE-TX] send failed err:0x400b[0m
+[0;32mI (38302) wifi:state: auth -> init (0x200)[0m
+[0;32mI (38312) wifi:new:<6,0>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (38312) mesh: [wifi]disconnected reason:2(auth expire), continuous:3/max:12, non-root, vote(,stopped)<><>[0m
+[0;32mI (38312) mesh_main: <MESH_EVENT_PARENT_DISCONNECTED>reason:2[0m
+[0;32mI (38312) wifi:new:<6,1>, old:<6,0>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (38332) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (39122) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[1;31mE (39122) mesh_main: [DRONE-TX] send failed err:0x400b[0m
+[0;32mI (39542) wifi:state: auth -> init (0x200)[0m
+[0;32mI (39552) wifi:new:<6,0>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (39552) mesh: [wifi]disconnected reason:2(auth expire), continuous:4/max:12, non-root, vote(,stopped)<><>[0m
+[0;32mI (39552) mesh_main: <MESH_EVENT_PARENT_DISCONNECTED>reason:2[0m
+[0;32mI (39552) wifi:new:<6,1>, old:<6,0>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (39572) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (40782) wifi:state: auth -> init (0x200)[0m
+[0;32mI (40792) wifi:new:<6,0>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (40792) mesh: [wifi]disconnected reason:2(auth expire), continuous:5/max:12, non-root, vote(,stopped)<><>[0m
+[0;32mI (40792) mesh_main: <MESH_EVENT_PARENT_DISCONNECTED>reason:2[0m
+[0;32mI (40792) wifi:new:<6,1>, old:<6,0>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (40812) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (41122) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[1;31mE (41122) mesh_main: [DRONE-TX] send failed err:0x400b[0m
+�p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p �p|���|����pp�p|� p I (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UARTI (1032) mesh_main: MAVLink UART initialized
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_main initialized[0m
+[0;32mI (1032) mesh_mainmesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1042) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1122) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1122) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1122) mesh_main: DRONE NODE STARTED heap:30836[0m
+[0;32mI (1132) main_task: Returned from app_main()[0m
+[0;32mI (1422) mesh: [S9]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-49[0m
+[0;32mI (1422) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-49, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1432) mesh: find root:ESPM_C47ED4, root_cap:1(max:10), new channel:6, old channel:0[0m
+[0;32mI (1432) mesh: [FIND][ch:6]AP:30, otherID:0, MAP:1, idle:0, candidate:0, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1442) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1452) mesh_main: unknown event id:22[0m
+[0;32mI (1452) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (1462) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1472) wifi:Total power save buffer number: 16[0m
+[0;32mI (1472) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1482) wifi:Init max length of beacon: 752/752[0m
+[0;33mW (1492) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1502) wifi:Total power save buffer number: 16[0m
+[0;32mI (1802) mesh: [SCAN][ch:6]AP:30, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:1,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1802) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1822) mesh: <nvs>write layer:0[0m
+[0;32mI (1822) mesh: <nvs>write assoc:0[0m
+[0;32mI (1822) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-16, 1c:c3:ab:c4:7e:d5[layer:1, assoc:0], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1832) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (2092) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2092) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2102) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2112) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2122) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (2122) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:1[0m
+[0;32mI (2122) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (2132) wifi:connected with ESPM_C47ED4, aid = 1, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2142) wifi:security: WPA2-PSK, phy: bgn, rssi: -16[0m
+[0;32mI (2152) wifi:pm start, type: 0[0m
+
+[0;32mI (2152) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2152) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (2172) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:8114ms, retries:1<normal connected>[0m
+[0;32mI (2172) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (2182) mesh_main: unknown event id:11[0m
+[0;32mI (2182) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (2202) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2392) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (4202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (6202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (8202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (752) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;32mI (752) wifi:enable tsf[0m
+[0;32mI (752) wifi:Total power save buffer number: 16[0m
+[0;32mI (752) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (752) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (772) mesh: <nvs>read layer:0[0m
+[0;32mI (772) mesh: <nvs>read assoc:0[0m
+[0;32mI (772) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (772) mesh: [IO]enable self-organizing<adaptive>[0m
+[0;32mI (782) wifi:Total power save buffer number: 16[0m
+[0;32mI (1042) mesh_main: MAVLink UART initialized[0m
+[0;32mI (1042) mesh_main: ML UART initialized[0m
+[0;32mI (1042) mesh: [CONFIG]fail to set node, err:0x4008[0m
+[0;32mI (1052) wifi:mode : sta (1c:c3:ab:c4:1b:44)[0m
+[0;32mI (1062) mesh: <MESH_NWK_LOOK_FOR_NETWORK>need_scan:0x1, need_scan_router:0x0, look_for_nwk_count:1[0m
+[0;32mI (1062) mesh_main: <MESH_EVENT_STARTED>ID:77:77:77:77:77:77[0m
+[0;32mI (1062) mesh_main: DRONE NODE STARTED heap:30712[0m
+[0;32mI (1072) main_task: Returned from app_main()[0m
+[0;32mI (1362) mesh: [S4]GND_ANCHOR, 28:05:a5:32:e2:85, channel:6, rssi:-49[0m
+[0;32mI (1362) mesh: find router:[ssid_len:10]GND_ANCHOR, rssi:-49, 28:05:a5:32:e2:85(encrypted), new channel:6, old channel:0[0m
+[0;32mI (1372) mesh: find root:ESPM_C47ED4, root_cap:1(max:10), new channel:6, old channel:0[0m
+[0;32mI (1372) mesh: [FIND][ch:6]AP:26, otherID:0, MAP:1, idle:0, candidate:0, root:1[28:05:a5:32:e2:85]router found[0m
+[0;32mI (1382) mesh: [FIND:1]find a network, channel:6, cfg<channel:6, router:GND_ANCHOR, 00:00:00:00:00:00>[0m
+
+[0;32mI (1392) wifi:mode : sta (1c:c3:ab:c4:1b:44) + softAP (1c:c3:ab:c4:1b:45)[0m
+[0;33mW (1402) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1412) wifi:Total power save buffer number: 16[0m
+[0;32mI (1412) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1412) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1392) mesh_main: unknown event id:22[0m
+[0;33mW (1432) wifi:<MESH AP>adjust channel:6, secondary channel offset:1(40U)[0m
+[0;32mI (1442) wifi:Total power save buffer number: 16[0m
+[0;32mI (1742) mesh: [SCAN][ch:6]AP:28, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:0,i:0][28:05:a5:32:e2:85]router found<>[0m
+[0;32mI (1742) mesh: 7388[selection]try rssi_threshold:-78, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (1752) mesh: [DONE]connect to parent:ESPM_C47ED4, channel:6, rssi:-29, 1c:c3:ab:c4:7e:d5[layer:1, assoc:0], my_vote_num:0/voter_num:0, rc[00:00:00:00:00:00/-120/0][0m
+[0;32mI (1772) mesh: set router bssid:28:05:a5:32:e2:85[0m
+[0;32mI (2022) wifi:new:<6,1>, old:<6,1>, ap:<6,1>, sta:<6,1>, prof:6, snd_ch_cfg:0x0[0m
+[0;32mI (2032) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2032) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2052) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2052) mesh: <MESH_NWK_MIE_CHANGE><><><><ROOT ADDR><><><>[0m
+[0;32mI (2052) mesh: <MESH_NWK_ROOT_ADDR>from assoc, layer:2, root_addr:1c:c3:ab:c4:7e:d5, root_cap:1[0m
+[0;32mI (2062) mesh: <MESH_NWK_ROOT_ADDR>idle, layer:2, root_addr:1c:c3:ab:c4:7e:d5, conflict_roots.num:0<>[0m
+[0;32mI (2072) mesh_main: <MESH_EVENT_ROOT_ADDRESS>root:1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2072) wifi:connected with ESPM_C47ED4, aid = 1, channel 6, 40U, bssid = 1c:c3:ab:c4:7e:d5[0m
+[0;32mI (2082) wifi:security: WPA2-PSK, phy: bgn, rssi: -30[0m
+[0;32mI (2092) wifi:pm start, type: 0[0m
+
+[0;32mI (2092) mesh: [scan]new scanning time:600ms, beacon interval:300ms[0m
+[0;32mI (2102) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:11331ms, retries:1<normal connected>[0m
+[0;32mI (2102) mesh_main: <MESH_EVENT_PARENT_CONNECTED>layer:0-->2, ID:77:77:77:77:77:77[0m
+[0;32mI (2112) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (2112) mesh_main: unknown event id:11[0m
+[0;32mI (2132) wifi:<ba-add>idx:0 (ifx:0, 1c:c3:ab:c4:7e:d5), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2332) wifi:AP's beacon interval = 307200 us, DTIM period = 1[0m
+[0;32mI (4142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (6142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (6862) mesh_main: [DRONE-RX] flag ACK - requesting photo[0m
+[0;32mI (8142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (10142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (12142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (13712) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-25, assoc:0(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (14142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (15212) mesh: 5966<scan>parent layer:1, rssi:-31, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (15212) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (15222) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (15232) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-31[0m
+[0;32mI (15232) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:4984ms, retries:2<>[0m
+[0;32mI (16142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (18142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (20142) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (20342) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-25, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (21852) mesh: 5966<scan>parent layer:1, rssi:-31, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (21852) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (21862) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (21862) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-31[0m
+[0;32mI (21872) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:8442ms, retries:3<>[0m
+[0;32mI (22152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (24152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (26152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (28152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (30152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (30522) mesh: 5161<active>parent layer:1(node), channel:6, rssi:-25, assoc:1(cnx rssi threshold:-120)my_assoc:0[0m
+[0;32mI (32032) mesh: 5966<scan>parent layer:1, rssi:-27, assoc:1(cnx rssi threshold:-120)[0m
+[0;32mI (32032) mesh: [SCAN][ch:6]AP:1, other(ID:0, RD:0), MAP:1, idle:0, candidate:1, root:1, topMAP:0[c:2,i:2][28:05:a5:32:e2:85]<weak>[0m
+[0;32mI (32042) mesh: 7388[weak]try rssi_threshold:-120, backoff times:0, max:5<-78,-82,-85>[0m
+[0;32mI (32042) mesh: 714[monitor]no change, parent:1c:c3:ab:c4:7e:d5, rssi:-27[0m
+[0;32mI (32052) mesh: 2004<arm>parent monitor, my layer:2(cap:6)(node), interval:336074ms, retries:3<>[0m
+[0;32mI (32152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (34152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (36152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (38152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (40152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (42152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (44152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (46152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (48152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (50152) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (52172) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (54032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (54172) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (55032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (56032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (56172) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (57032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (58032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (58182) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (59032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (60032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (60182) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (61032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (62042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (62182) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (62982) mesh_main: [DRONE-RX] flag ACK - requesting photo[0m
+[0;32mI (63042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (64042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (64182) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (65032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (66042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (66192) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (67032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (68032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (68192) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (69032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (70032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (70192) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (71032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (72032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (72192) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (73032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (74032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (74192) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (75032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (76032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (76202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (77032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (78032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (78202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (79032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (80032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (80202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (81032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (82032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (82202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (83032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (84032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (84202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (85032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (86032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (86202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (87032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (88032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (88202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (89042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (90032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (90202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (91042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (92042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (92202) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (93042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (94032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (94212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (95032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (96032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (96212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (97032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (98032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (98212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (99032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (100032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (100212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (101032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (102032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (102212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (103032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (103212) mesh: [scan]new scanning time:1500ms, beacon interval:1000ms[0m
+[0;32mI (104032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (104212) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (105032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (106032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (106222) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (107032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (108042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (108222) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (109032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (110032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (110222) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (111032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (112032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (112232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (113032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (114032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (114232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (115032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (116032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (116232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (117032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (118032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (118232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (119032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (120032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (120232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (121032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (122032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (122232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (123032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (124032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (124232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (125032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (126032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (126232) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (127032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (128042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (128242) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (129032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (129812) mesh: 5127<assoc>parent layer:1, channel:6, rssi:-23, assoc:1, rssi threshold<-78,-82,-85>[0m
+[0;32mI (130032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (130252) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (131032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (132032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (132252) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (133032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (134032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (134252) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (135032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (136032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (136252) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (137032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (138032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (138262) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (139032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (140042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (140262) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (141032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (142032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (142262) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (143032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (144032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (144272) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (145032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (146032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (146272) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (147032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (148032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (148282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (149032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (150032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (150282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (151032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (152032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (152282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (153032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (154032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (154282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (155032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (156032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (156282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (157032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (158032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (158282) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (159032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (160032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (160292) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (161032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (162032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (162302) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (163032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (164032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (164302) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (165032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (166032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (166312) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (167032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (168022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (168312) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (169032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (170032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (170322) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (171032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (172032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (172322) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (173032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (174032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (174322) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (175032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (176032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (176322) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (177032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (178032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (178322) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (179032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (180022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (180332) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (181022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (182022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (182332) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (183022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (184032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (184342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (185032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (186032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (186342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (187032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (188032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (188342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (189032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (190032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (190342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (191032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (192032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (192342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (192582) mesh_main: [DRONE-RX] flag ACK - requesting photo[0m
+[0;32mI (193022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (194022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (194342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (195042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (196032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (196342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (197022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (198022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (198342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (199032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (200032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (200342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (201032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (202032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (202342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (203032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (204032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (204342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (205032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (206032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (206342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (207032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (208032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (208342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (209022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (209892) mesh_main: [ML-RX] image transfer started[0m
+[0;32mI (210022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (210342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (211022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (212022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (212342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (213032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (214032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (214342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (215022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (216032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (216342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (217032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (218032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (218342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (219032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (219942) mesh_main: [ML-TX] CLEAR sent[0m
+[0;32mI (219942) mesh_main: [ML-RX] image complete 115200 bytes[0m
+[0;32mI (219942) mesh_main: [ML-TX] chunk 1/501 sent err:0x4008[0m
+[0;32mI (219952) mesh_main: [ML-TX] chunk 2/501 sent err:0x4008[0m
+[0;32mI (219962) mesh_main: [ML-TX] chunk 3/501 sent err:0x4008[0m
+[0;32mI (219972) mesh_main: [ML-TX] chunk 4/501 sent err:0x4008[0m
+[0;32mI (219982) mesh_main: [ML-TX] chunk 5/501 sent err:0x4008[0m
+[0;32mI (219992) mesh_main: [ML-TX] chunk 6/501 sent err:0x4008[0m
+[0;32mI (220002) mesh_main: [ML-TX] chunk 7/501 sent err:0x4008[0m
+[0;32mI (220012) mesh_main: [ML-TX] chunk 8/501 sent err:0x4008[0m
+[0;32mI (220022) mesh_main: [ML-TX] chunk 9/501 sent err:0x4008[0m
+[0;32mI (220032) mesh_main: [ML-TX] chunk 10/501 sent err:0x4008[0m
+[0;32mI (220032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (220042) mesh_main: [ML-TX] chunk 11/501 sent err:0x4008[0m
+[0;32mI (220052) mesh_main: [ML-TX] chunk 12/501 sent err:0x4008[0m
+[0;32mI (220062) mesh_main: [ML-TX] chunk 13/501 sent err:0x4008[0m
+[0;32mI (220072) mesh_main: [ML-TX] chunk 14/501 sent err:0x4008[0m
+[0;32mI (220082) mesh_main: [ML-TX] chunk 15/501 sent err:0x4008[0m
+[0;32mI (220092) mesh_main: [ML-TX] chunk 16/501 sent err:0x4008[0m
+[0;32mI (220102) mesh_main: [ML-TX] chunk 17/501 sent err:0x4008[0m
+[0;32mI (220112) mesh_main: [ML-TX] chunk 18/501 sent err:0x4008[0m
+[0;32mI (220122) mesh_main: [ML-TX] chunk 19/501 sent err:0x4008[0m
+[0;32mI (220132) mesh_main: [ML-TX] chunk 20/501 sent err:0x4008[0m
+[0;32mI (220142) mesh_main: [ML-TX] chunk 21/501 sent err:0x4008[0m
+[0;32mI (220152) mesh_main: [ML-TX] chunk 22/501 sent err:0x4008[0m
+[0;32mI (220162) mesh_main: [ML-TX] chunk 23/501 sent err:0x4008[0m
+[0;32mI (220172) mesh_main: [ML-TX] chunk 24/501 sent err:0x4008[0m
+[0;32mI (220182) mesh_main: [ML-TX] chunk 25/501 sent err:0x4008[0m
+[0;32mI (220192) mesh_main: [ML-TX] chunk 26/501 sent err:0x4008[0m
+[0;32mI (220202) mesh_main: [ML-TX] chunk 27/501 sent err:0x4008[0m
+[0;32mI (220212) mesh_main: [ML-TX] chunk 28/501 sent err:0x4008[0m
+[0;32mI (220222) mesh_main: [ML-TX] chunk 29/501 sent err:0x4008[0m
+[0;32mI (220232) mesh_main: [ML-TX] chunk 30/501 sent err:0x4008[0m
+[0;32mI (220242) mesh_main: [ML-TX] chunk 31/501 sent err:0x4008[0m
+[0;32mI (220252) mesh_main: [ML-TX] chunk 32/501 sent err:0x4008[0m
+[0;32mI (220262) mesh_main: [ML-TX] chunk 33/501 sent err:0x4008[0m
+[0;32mI (220272) mesh_main: [ML-TX] chunk 34/501 sent err:0x4008[0m
+[0;32mI (220282) mesh_main: [ML-TX] chunk 35/501 sent err:0x4008[0m
+[0;32mI (220292) mesh_main: [ML-TX] chunk 36/501 sent err:0x4008[0m
+[0;32mI (220302) mesh_main: [ML-TX] chunk 37/501 sent err:0x4008[0m
+[0;32mI (220312) mesh_main: [ML-TX] chunk 38/501 sent err:0x4008[0m
+[0;32mI (220322) mesh_main: [ML-TX] chunk 39/501 sent err:0x4008[0m
+[0;32mI (220332) mesh_main: [ML-TX] chunk 40/501 sent err:0x4008[0m
+[0;32mI (220342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (220342) mesh_main: [ML-TX] chunk 41/501 sent err:0x4008[0m
+[0;32mI (220352) mesh_main: [ML-TX] chunk 42/501 sent err:0x4008[0m
+[0;32mI (220362) mesh_main: [ML-TX] chunk 43/501 sent err:0x4008[0m
+[0;32mI (220372) mesh_main: [ML-TX] chunk 44/501 sent err:0x4008[0m
+[0;32mI (220382) mesh_main: [ML-TX] chunk 45/501 sent err:0x4008[0m
+[0;32mI (220392) mesh_main: [ML-TX] chunk 46/501 sent err:0x4008[0m
+[0;32mI (220402) mesh_main: [ML-TX] chunk 47/501 sent err:0x4008[0m
+[0;32mI (220412) mesh_main: [ML-TX] chunk 48/501 sent err:0x4008[0m
+[0;32mI (220422) mesh_main: [ML-TX] chunk 49/501 sent err:0x4008[0m
+[0;32mI (220432) mesh_main: [ML-TX] chunk 50/501 sent err:0x4008[0m
+[0;32mI (220442) mesh_main: [ML-TX] chunk 51/501 sent err:0x4008[0m
+[0;32mI (220452) mesh_main: [ML-TX] chunk 52/501 sent err:0x4008[0m
+[0;32mI (220462) mesh_main: [ML-TX] chunk 53/501 sent err:0x4008[0m
+[0;32mI (220472) mesh_main: [ML-TX] chunk 54/501 sent err:0x4008[0m
+[0;32mI (220482) mesh_main: [ML-TX] chunk 55/501 sent err:0x4008[0m
+[0;32mI (220492) mesh_main: [ML-TX] chunk 56/501 sent err:0x4008[0m
+[0;32mI (220502) mesh_main: [ML-TX] chunk 57/501 sent err:0x4008[0m
+[0;32mI (220512) mesh_main: [ML-TX] chunk 58/501 sent err:0x4008[0m
+[0;32mI (220522) mesh_main: [ML-TX] chunk 59/501 sent err:0x4008[0m
+[0;32mI (220532) mesh_main: [ML-TX] chunk 60/501 sent err:0x4008[0m
+[0;32mI (220542) mesh_main: [ML-TX] chunk 61/501 sent err:0x4008[0m
+[0;32mI (220552) mesh_main: [ML-TX] chunk 62/501 sent err:0x4008[0m
+[0;32mI (220562) mesh_main: [ML-TX] chunk 63/501 sent err:0x4008[0m
+[0;32mI (220572) mesh_main: [ML-TX] chunk 64/501 sent err:0x4008[0m
+[0;32mI (220582) mesh_main: [ML-TX] chunk 65/501 sent err:0x4008[0m
+[0;32mI (220592) mesh_main: [ML-TX] chunk 66/501 sent err:0x4008[0m
+[0;32mI (220602) mesh_main: [ML-TX] chunk 67/501 sent err:0x4008[0m
+[0;32mI (220612) mesh_main: [ML-TX] chunk 68/501 sent err:0x4008[0m
+[0;32mI (220622) mesh_main: [ML-TX] chunk 69/501 sent err:0x4008[0m
+[0;32mI (220632) mesh_main: [ML-TX] chunk 70/501 sent err:0x4008[0m
+[0;32mI (220642) mesh_main: [ML-TX] chunk 71/501 sent err:0x4008[0m
+[0;32mI (220652) mesh_main: [ML-TX] chunk 72/501 sent err:0x4008[0m
+[0;32mI (220662) mesh_main: [ML-TX] chunk 73/501 sent err:0x4008[0m
+[0;32mI (220672) mesh_main: [ML-TX] chunk 74/501 sent err:0x4008[0m
+[0;32mI (220682) mesh_main: [ML-TX] chunk 75/501 sent err:0x4008[0m
+[0;32mI (220692) mesh_main: [ML-TX] chunk 76/501 sent err:0x4008[0m
+[0;32mI (220702) mesh_main: [ML-TX] chunk 77/501 sent err:0x4008[0m
+[0;32mI (220712) mesh_main: [ML-TX] chunk 78/501 sent err:0x4008[0m
+[0;32mI (220722) mesh_main: [ML-TX] chunk 79/501 sent err:0x4008[0m
+[0;32mI (220732) mesh_main: [ML-TX] chunk 80/501 sent err:0x4008[0m
+[0;32mI (220742) mesh_main: [ML-TX] chunk 81/501 sent err:0x4008[0m
+[0;32mI (220752) mesh_main: [ML-TX] chunk 82/501 sent err:0x4008[0m
+[0;32mI (220762) mesh_main: [ML-TX] chunk 83/501 sent err:0x4008[0m
+[0;32mI (220772) mesh_main: [ML-TX] chunk 84/501 sent err:0x4008[0m
+[0;32mI (220782) mesh_main: [ML-TX] chunk 85/501 sent err:0x4008[0m
+[0;32mI (220792) mesh_main: [ML-TX] chunk 86/501 sent err:0x4008[0m
+[0;32mI (220802) mesh_main: [ML-TX] chunk 87/501 sent err:0x4008[0m
+[0;32mI (220812) mesh_main: [ML-TX] chunk 88/501 sent err:0x4008[0m
+[0;32mI (220822) mesh_main: [ML-TX] chunk 89/501 sent err:0x4008[0m
+[0;32mI (220832) mesh_main: [ML-TX] chunk 90/501 sent err:0x4008[0m
+[0;32mI (220842) mesh_main: [ML-TX] chunk 91/501 sent err:0x4008[0m
+[0;32mI (220852) mesh_main: [ML-TX] chunk 92/501 sent err:0x4008[0m
+[0;32mI (220862) mesh_main: [ML-TX] chunk 93/501 sent err:0x4008[0m
+[0;32mI (220872) mesh_main: [ML-TX] chunk 94/501 sent err:0x4008[0m
+[0;32mI (220882) mesh_main: [ML-TX] chunk 95/501 sent err:0x4008[0m
+[0;32mI (220892) mesh_main: [ML-TX] chunk 96/501 sent err:0x4008[0m
+[0;32mI (220902) mesh_main: [ML-TX] chunk 97/501 sent err:0x4008[0m
+[0;32mI (220912) mesh_main: [ML-TX] chunk 98/501 sent err:0x4008[0m
+[0;32mI (220922) mesh_main: [ML-TX] chunk 99/501 sent err:0x4008[0m
+[0;32mI (220932) mesh_main: [ML-TX] chunk 100/501 sent err:0x4008[0m
+[0;32mI (220942) mesh_main: [ML-TX] chunk 101/501 sent err:0x4008[0m
+[0;32mI (220952) mesh_main: [ML-TX] chunk 102/501 sent err:0x4008[0m
+[0;32mI (220962) mesh_main: [ML-TX] chunk 103/501 sent err:0x4008[0m
+[0;32mI (220972) mesh_main: [ML-TX] chunk 104/501 sent err:0x4008[0m
+[0;32mI (220982) mesh_main: [ML-TX] chunk 105/501 sent err:0x4008[0m
+[0;32mI (220992) mesh_main: [ML-TX] chunk 106/501 sent err:0x4008[0m
+[0;32mI (221002) mesh_main: [ML-TX] chunk 107/501 sent err:0x4008[0m
+[0;32mI (221012) mesh_main: [ML-TX] chunk 108/501 sent err:0x4008[0m
+[0;32mI (221022) mesh_main: [ML-TX] chunk 109/501 sent err:0x4008[0m
+[0;32mI (221022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (221032) mesh_main: [ML-TX] chunk 110/501 sent err:0x4008[0m
+[0;32mI (221042) mesh_main: [ML-TX] chunk 111/501 sent err:0x4008[0m
+[0;32mI (221052) mesh_main: [ML-TX] chunk 112/501 sent err:0x4008[0m
+[0;32mI (221062) mesh_main: [ML-TX] chunk 113/501 sent err:0x4008[0m
+[0;32mI (221072) mesh_main: [ML-TX] chunk 114/501 sent err:0x4008[0m
+[0;32mI (221082) mesh_main: [ML-TX] chunk 115/501 sent err:0x4008[0m
+[0;32mI (221092) mesh_main: [ML-TX] chunk 116/501 sent err:0x4008[0m
+[0;32mI (221102) mesh_main: [ML-TX] chunk 117/501 sent err:0x4008[0m
+[0;32mI (221112) mesh_main: [ML-TX] chunk 118/501 sent err:0x4008[0m
+[0;32mI (221122) mesh_main: [ML-TX] chunk 119/501 sent err:0x4008[0m
+[0;32mI (221132) mesh_main: [ML-TX] chunk 120/501 sent err:0x4008[0m
+[0;32mI (221142) mesh_main: [ML-TX] chunk 121/501 sent err:0x4008[0m
+[0;32mI (221152) mesh_main: [ML-TX] chunk 122/501 sent err:0x4008[0m
+[0;32mI (221162) mesh_main: [ML-TX] chunk 123/501 sent err:0x4008[0m
+[0;32mI (221172) mesh_main: [ML-TX] chunk 124/501 sent err:0x4008[0m
+[0;32mI (221182) mesh_main: [ML-TX] chunk 125/501 sent err:0x4008[0m
+[0;32mI (221192) mesh_main: [ML-TX] chunk 126/501 sent err:0x4008[0m
+[0;32mI (221202) mesh_main: [ML-TX] chunk 127/501 sent err:0x4008[0m
+[0;32mI (221212) mesh_main: [ML-TX] chunk 128/501 sent err:0x4008[0m
+[0;32mI (221222) mesh_main: [ML-TX] chunk 129/501 sent err:0x4008[0m
+[0;32mI (221232) mesh_main: [ML-TX] chunk 130/501 sent err:0x4008[0m
+[0;32mI (221242) mesh_main: [ML-TX] chunk 131/501 sent err:0x4008[0m
+[0;32mI (221252) mesh_main: [ML-TX] chunk 132/501 sent err:0x4008[0m
+[0;32mI (221262) mesh_main: [ML-TX] chunk 133/501 sent err:0x4008[0m
+[0;32mI (221272) mesh_main: [ML-TX] chunk 134/501 sent err:0x4008[0m
+[0;32mI (221282) mesh_main: [ML-TX] chunk 135/501 sent err:0x4008[0m
+[0;32mI (221292) mesh_main: [ML-TX] chunk 136/501 sent err:0x4008[0m
+[0;32mI (221302) mesh_main: [ML-TX] chunk 137/501 sent err:0x4008[0m
+[0;32mI (221312) mesh_main: [ML-TX] chunk 138/501 sent err:0x4008[0m
+[0;32mI (221322) mesh_main: [ML-TX] chunk 139/501 sent err:0x4008[0m
+[0;32mI (221332) mesh_main: [ML-TX] chunk 140/501 sent err:0x4008[0m
+[0;32mI (221342) mesh_main: [ML-TX] chunk 141/501 sent err:0x4008[0m
+[0;32mI (221352) mesh_main: [ML-TX] chunk 142/501 sent err:0x4008[0m
+[0;32mI (221362) mesh_main: [ML-TX] chunk 143/501 sent err:0x4008[0m
+[0;32mI (221372) mesh_main: [ML-TX] chunk 144/501 sent err:0x4008[0m
+[0;32mI (221382) mesh_main: [ML-TX] chunk 145/501 sent err:0x4008[0m
+[0;32mI (221392) mesh_main: [ML-TX] chunk 146/501 sent err:0x4008[0m
+[0;32mI (221402) mesh_main: [ML-TX] chunk 147/501 sent err:0x4008[0m
+[0;32mI (221412) mesh_main: [ML-TX] chunk 148/501 sent err:0x4008[0m
+[0;32mI (221422) mesh_main: [ML-TX] chunk 149/501 sent err:0x4008[0m
+[0;32mI (221432) mesh_main: [ML-TX] chunk 150/501 sent err:0x4008[0m
+[0;32mI (221442) mesh_main: [ML-TX] chunk 151/501 sent err:0x4008[0m
+[0;32mI (221452) mesh_main: [ML-TX] chunk 152/501 sent err:0x4008[0m
+[0;32mI (221462) mesh_main: [ML-TX] chunk 153/501 sent err:0x4008[0m
+[0;32mI (221472) mesh_main: [ML-TX] chunk 154/501 sent err:0x4008[0m
+[0;32mI (221482) mesh_main: [ML-TX] chunk 155/501 sent err:0x4008[0m
+[0;32mI (221492) mesh_main: [ML-TX] chunk 156/501 sent err:0x4008[0m
+[0;32mI (221502) mesh_main: [ML-TX] chunk 157/501 sent err:0x4008[0m
+[0;32mI (221512) mesh_main: [ML-TX] chunk 158/501 sent err:0x4008[0m
+[0;32mI (221522) mesh_main: [ML-TX] chunk 159/501 sent err:0x4008[0m
+[0;32mI (221532) mesh_main: [ML-TX] chunk 160/501 sent err:0x4008[0m
+[0;32mI (221542) mesh_main: [ML-TX] chunk 161/501 sent err:0x4008[0m
+[0;32mI (221552) mesh_main: [ML-TX] chunk 162/501 sent err:0x4008[0m
+[0;32mI (221562) mesh_main: [ML-TX] chunk 163/501 sent err:0x4008[0m
+[0;32mI (221572) mesh_main: [ML-TX] chunk 164/501 sent err:0x4008[0m
+[0;32mI (221582) mesh_main: [ML-TX] chunk 165/501 sent err:0x4008[0m
+[0;32mI (221592) mesh_main: [ML-TX] chunk 166/501 sent err:0x4008[0m
+[0;32mI (221602) mesh_main: [ML-TX] chunk 167/501 sent err:0x4008[0m
+[0;32mI (221612) mesh_main: [ML-TX] chunk 168/501 sent err:0x4008[0m
+[0;32mI (221622) mesh_main: [ML-TX] chunk 169/501 sent err:0x4008[0m
+[0;32mI (221632) mesh_main: [ML-TX] chunk 170/501 sent err:0x4008[0m
+[0;32mI (221642) mesh_main: [ML-TX] chunk 171/501 sent err:0x4008[0m
+[0;32mI (221652) mesh_main: [ML-TX] chunk 172/501 sent err:0x4008[0m
+[0;32mI (221662) mesh_main: [ML-TX] chunk 173/501 sent err:0x4008[0m
+[0;32mI (221672) mesh_main: [ML-TX] chunk 174/501 sent err:0x4008[0m
+[0;32mI (221682) mesh_main: [ML-TX] chunk 175/501 sent err:0x4008[0m
+[0;32mI (221692) mesh_main: [ML-TX] chunk 176/501 sent err:0x4008[0m
+[0;32mI (221702) mesh_main: [ML-TX] chunk 177/501 sent err:0x4008[0m
+[0;32mI (221712) mesh_main: [ML-TX] chunk 178/501 sent err:0x4008[0m
+[0;32mI (221722) mesh_main: [ML-TX] chunk 179/501 sent err:0x4008[0m
+[0;32mI (221732) mesh_main: [ML-TX] chunk 180/501 sent err:0x4008[0m
+[0;32mI (221742) mesh_main: [ML-TX] chunk 181/501 sent err:0x4008[0m
+[0;32mI (221752) mesh_main: [ML-TX] chunk 182/501 sent err:0x4008[0m
+[0;32mI (221762) mesh_main: [ML-TX] chunk 183/501 sent err:0x4008[0m
+[0;32mI (221772) mesh_main: [ML-TX] chunk 184/501 sent err:0x4008[0m
+[0;32mI (221782) mesh_main: [ML-TX] chunk 185/501 sent err:0x4008[0m
+[0;32mI (221792) mesh_main: [ML-TX] chunk 186/501 sent err:0x4008[0m
+[0;32mI (221802) mesh_main: [ML-TX] chunk 187/501 sent err:0x4008[0m
+[0;32mI (221812) mesh_main: [ML-TX] chunk 188/501 sent err:0x4008[0m
+[0;32mI (221822) mesh_main: [ML-TX] chunk 189/501 sent err:0x4008[0m
+[0;32mI (221832) mesh_main: [ML-TX] chunk 190/501 sent err:0x4008[0m
+[0;32mI (221842) mesh_main: [ML-TX] chunk 191/501 sent err:0x4008[0m
+[0;32mI (221852) mesh_main: [ML-TX] chunk 192/501 sent err:0x4008[0m
+[0;32mI (221862) mesh_main: [ML-TX] chunk 193/501 sent err:0x4008[0m
+[0;32mI (221872) mesh_main: [ML-TX] chunk 194/501 sent err:0x4008[0m
+[0;32mI (221882) mesh_main: [ML-TX] chunk 195/501 sent err:0x4008[0m
+[0;32mI (221892) mesh_main: [ML-TX] chunk 196/501 sent err:0x4008[0m
+[0;32mI (221902) mesh_main: [ML-TX] chunk 197/501 sent err:0x4008[0m
+[0;32mI (221912) mesh_main: [ML-TX] chunk 198/501 sent err:0x4008[0m
+[0;32mI (221922) mesh_main: [ML-TX] chunk 199/501 sent err:0x4008[0m
+[0;32mI (221932) mesh_main: [ML-TX] chunk 200/501 sent err:0x4008[0m
+[0;32mI (221942) mesh_main: [ML-TX] chunk 201/501 sent err:0x4008[0m
+[0;32mI (221952) mesh_main: [ML-TX] chunk 202/501 sent err:0x4008[0m
+[0;32mI (221962) mesh_main: [ML-TX] chunk 203/501 sent err:0x4008[0m
+[0;32mI (221972) mesh_main: [ML-TX] chunk 204/501 sent err:0x4008[0m
+[0;32mI (221982) mesh_main: [ML-TX] chunk 205/501 sent err:0x4008[0m
+[0;32mI (221992) mesh_main: [ML-TX] chunk 206/501 sent err:0x4008[0m
+[0;32mI (222002) mesh_main: [ML-TX] chunk 207/501 sent err:0x4008[0m
+[0;32mI (222012) mesh_main: [ML-TX] chunk 208/501 sent err:0x4008[0m
+[0;32mI (222022) mesh_main: [ML-TX] chunk 209/501 sent err:0x4008[0m
+[0;32mI (222032) mesh_main: [ML-TX] chunk 210/501 sent err:0x4008[0m
+[0;32mI (222032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (222042) mesh_main: [ML-TX] chunk 211/501 sent err:0x4008[0m
+[0;32mI (222052) mesh_main: [ML-TX] chunk 212/501 sent err:0x4008[0m
+[0;32mI (222062) mesh_main: [ML-TX] chunk 213/501 sent err:0x4008[0m
+[0;32mI (222072) mesh_main: [ML-TX] chunk 214/501 sent err:0x4008[0m
+[0;32mI (222082) mesh_main: [ML-TX] chunk 215/501 sent err:0x4008[0m
+[0;32mI (222092) mesh_main: [ML-TX] chunk 216/501 sent err:0x4008[0m
+[0;32mI (222102) mesh_main: [ML-TX] chunk 217/501 sent err:0x4008[0m
+[0;32mI (222112) mesh_main: [ML-TX] chunk 218/501 sent err:0x4008[0m
+[0;32mI (222122) mesh_main: [ML-TX] chunk 219/501 sent err:0x4008[0m
+[0;32mI (222132) mesh_main: [ML-TX] chunk 220/501 sent err:0x4008[0m
+[0;32mI (222142) mesh_main: [ML-TX] chunk 221/501 sent err:0x4008[0m
+[0;32mI (222152) mesh_main: [ML-TX] chunk 222/501 sent err:0x4008[0m
+[0;32mI (222162) mesh_main: [ML-TX] chunk 223/501 sent err:0x4008[0m
+[0;32mI (222172) mesh_main: [ML-TX] chunk 224/501 sent err:0x4008[0m
+[0;32mI (222182) mesh_main: [ML-TX] chunk 225/501 sent err:0x4008[0m
+[0;32mI (222192) mesh_main: [ML-TX] chunk 226/501 sent err:0x4008[0m
+[0;32mI (222202) mesh_main: [ML-TX] chunk 227/501 sent err:0x4008[0m
+[0;32mI (222212) mesh_main: [ML-TX] chunk 228/501 sent err:0x4008[0m
+[0;32mI (222222) mesh_main: [ML-TX] chunk 229/501 sent err:0x4008[0m
+[0;32mI (222232) mesh_main: [ML-TX] chunk 230/501 sent err:0x4008[0m
+[0;32mI (222242) mesh_main: [ML-TX] chunk 231/501 sent err:0x4008[0m
+[0;32mI (222252) mesh_main: [ML-TX] chunk 232/501 sent err:0x4008[0m
+[0;32mI (222262) mesh_main: [ML-TX] chunk 233/501 sent err:0x4008[0m
+[0;32mI (222272) mesh_main: [ML-TX] chunk 234/501 sent err:0x4008[0m
+[0;32mI (222282) mesh_main: [ML-TX] chunk 235/501 sent err:0x4008[0m
+[0;32mI (222292) mesh_main: [ML-TX] chunk 236/501 sent err:0x4008[0m
+[0;32mI (222302) mesh_main: [ML-TX] chunk 237/501 sent err:0x4008[0m
+[0;32mI (222312) mesh_main: [ML-TX] chunk 238/501 sent err:0x4008[0m
+[0;32mI (222322) mesh_main: [ML-TX] chunk 239/501 sent err:0x4008[0m
+[0;32mI (222332) mesh_main: [ML-TX] chunk 240/501 sent err:0x4008[0m
+[0;32mI (222342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (222342) mesh_main: [ML-TX] chunk 241/501 sent err:0x4008[0m
+[0;32mI (222352) mesh_main: [ML-TX] chunk 242/501 sent err:0x4008[0m
+[0;32mI (222362) mesh_main: [ML-TX] chunk 243/501 sent err:0x4008[0m
+[0;32mI (222372) mesh_main: [ML-TX] chunk 244/501 sent err:0x4008[0m
+[0;32mI (222382) mesh_main: [ML-TX] chunk 245/501 sent err:0x4008[0m
+[0;32mI (222392) mesh_main: [ML-TX] chunk 246/501 sent err:0x4008[0m
+[0;32mI (222402) mesh_main: [ML-TX] chunk 247/501 sent err:0x4008[0m
+[0;32mI (222412) mesh_main: [ML-TX] chunk 248/501 sent err:0x4008[0m
+[0;32mI (222422) mesh_main: [ML-TX] chunk 249/501 sent err:0x4008[0m
+[0;32mI (222432) mesh_main: [ML-TX] chunk 250/501 sent err:0x4008[0m
+[0;32mI (222442) mesh_main: [ML-TX] chunk 251/501 sent err:0x4008[0m
+[0;32mI (222452) mesh_main: [ML-TX] chunk 252/501 sent err:0x4008[0m
+[0;32mI (222462) mesh_main: [ML-TX] chunk 253/501 sent err:0x4008[0m
+[0;32mI (222472) mesh_main: [ML-TX] chunk 254/501 sent err:0x4008[0m
+[0;32mI (222482) mesh_main: [ML-TX] chunk 255/501 sent err:0x4008[0m
+[0;32mI (222492) mesh_main: [ML-TX] chunk 256/501 sent err:0x4008[0m
+[0;32mI (222502) mesh_main: [ML-TX] chunk 257/501 sent err:0x4008[0m
+[0;32mI (222512) mesh_main: [ML-TX] chunk 258/501 sent err:0x4008[0m
+[0;32mI (222522) mesh_main: [ML-TX] chunk 259/501 sent err:0x4008[0m
+[0;32mI (222532) mesh_main: [ML-TX] chunk 260/501 sent err:0x4008[0m
+[0;32mI (222542) mesh_main: [ML-TX] chunk 261/501 sent err:0x4008[0m
+[0;32mI (222552) mesh_main: [ML-TX] chunk 262/501 sent err:0x4008[0m
+[0;32mI (222562) mesh_main: [ML-TX] chunk 263/501 sent err:0x4008[0m
+[0;32mI (222572) mesh_main: [ML-TX] chunk 264/501 sent err:0x4008[0m
+[0;32mI (222582) mesh_main: [ML-TX] chunk 265/501 sent err:0x4008[0m
+[0;32mI (222592) mesh_main: [ML-TX] chunk 266/501 sent err:0x4008[0m
+[0;32mI (222602) mesh_main: [ML-TX] chunk 267/501 sent err:0x4008[0m
+[0;32mI (222612) mesh_main: [ML-TX] chunk 268/501 sent err:0x4008[0m
+[0;32mI (222622) mesh_main: [ML-TX] chunk 269/501 sent err:0x4008[0m
+[0;32mI (222632) mesh_main: [ML-TX] chunk 270/501 sent err:0x4008[0m
+[0;32mI (222642) mesh_main: [ML-TX] chunk 271/501 sent err:0x4008[0m
+[0;32mI (222652) mesh_main: [ML-TX] chunk 272/501 sent err:0x4008[0m
+[0;32mI (222662) mesh_main: [ML-TX] chunk 273/501 sent err:0x4008[0m
+[0;32mI (222672) mesh_main: [ML-TX] chunk 274/501 sent err:0x4008[0m
+[0;32mI (222682) mesh_main: [ML-TX] chunk 275/501 sent err:0x4008[0m
+[0;32mI (222692) mesh_main: [ML-TX] chunk 276/501 sent err:0x4008[0m
+[0;32mI (222702) mesh_main: [ML-TX] chunk 277/501 sent err:0x4008[0m
+[0;32mI (222712) mesh_main: [ML-TX] chunk 278/501 sent err:0x4008[0m
+[0;32mI (222722) mesh_main: [ML-TX] chunk 279/501 sent err:0x4008[0m
+[0;32mI (222732) mesh_main: [ML-TX] chunk 280/501 sent err:0x4008[0m
+[0;32mI (222742) mesh_main: [ML-TX] chunk 281/501 sent err:0x4008[0m
+[0;32mI (222752) mesh_main: [ML-TX] chunk 282/501 sent err:0x4008[0m
+[0;32mI (222762) mesh_main: [ML-TX] chunk 283/501 sent err:0x4008[0m
+[0;32mI (222772) mesh_main: [ML-TX] chunk 284/501 sent err:0x4008[0m
+[0;32mI (222782) mesh_main: [ML-TX] chunk 285/501 sent err:0x4008[0m
+[0;32mI (222792) mesh_main: [ML-TX] chunk 286/501 sent err:0x4008[0m
+[0;32mI (222802) mesh_main: [ML-TX] chunk 287/501 sent err:0x4008[0m
+[0;32mI (222812) mesh_main: [ML-TX] chunk 288/501 sent err:0x4008[0m
+[0;32mI (222822) mesh_main: [ML-TX] chunk 289/501 sent err:0x4008[0m
+[0;32mI (222832) mesh_main: [ML-TX] chunk 290/501 sent err:0x4008[0m
+[0;32mI (222842) mesh_main: [ML-TX] chunk 291/501 sent err:0x4008[0m
+[0;32mI (222852) mesh_main: [ML-TX] chunk 292/501 sent err:0x4008[0m
+[0;32mI (222862) mesh_main: [ML-TX] chunk 293/501 sent err:0x4008[0m
+[0;32mI (222872) mesh_main: [ML-TX] chunk 294/501 sent err:0x4008[0m
+[0;32mI (222882) mesh_main: [ML-TX] chunk 295/501 sent err:0x4008[0m
+[0;32mI (222892) mesh_main: [ML-TX] chunk 296/501 sent err:0x4008[0m
+[0;32mI (222902) mesh_main: [ML-TX] chunk 297/501 sent err:0x4008[0m
+[0;32mI (222912) mesh_main: [ML-TX] chunk 298/501 sent err:0x4008[0m
+[0;32mI (222922) mesh_main: [ML-TX] chunk 299/501 sent err:0x4008[0m
+[0;32mI (222932) mesh_main: [ML-TX] chunk 300/501 sent err:0x4008[0m
+[0;32mI (222942) mesh_main: [ML-TX] chunk 301/501 sent err:0x4008[0m
+[0;32mI (222952) mesh_main: [ML-TX] chunk 302/501 sent err:0x4008[0m
+[0;32mI (222962) mesh_main: [ML-TX] chunk 303/501 sent err:0x4008[0m
+[0;32mI (222972) mesh_main: [ML-TX] chunk 304/501 sent err:0x4008[0m
+[0;32mI (222982) mesh_main: [ML-TX] chunk 305/501 sent err:0x4008[0m
+[0;32mI (222992) mesh_main: [ML-TX] chunk 306/501 sent err:0x4008[0m
+[0;32mI (223002) mesh_main: [ML-TX] chunk 307/501 sent err:0x4008[0m
+[0;32mI (223012) mesh_main: [ML-TX] chunk 308/501 sent err:0x4008[0m
+[0;32mI (223022) mesh_main: [ML-TX] chunk 309/501 sent err:0x4008[0m
+[0;32mI (223022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (223032) mesh_main: [ML-TX] chunk 310/501 sent err:0x4008[0m
+[0;32mI (223042) mesh_main: [ML-TX] chunk 311/501 sent err:0x4008[0m
+[0;32mI (223052) mesh_main: [ML-TX] chunk 312/501 sent err:0x4008[0m
+[0;32mI (223062) mesh_main: [ML-TX] chunk 313/501 sent err:0x4008[0m
+[0;32mI (223072) mesh_main: [ML-TX] chunk 314/501 sent err:0x4008[0m
+[0;32mI (223082) mesh_main: [ML-TX] chunk 315/501 sent err:0x4008[0m
+[0;32mI (223092) mesh_main: [ML-TX] chunk 316/501 sent err:0x4008[0m
+[0;32mI (223102) mesh_main: [ML-TX] chunk 317/501 sent err:0x4008[0m
+[0;32mI (223112) mesh_main: [ML-TX] chunk 318/501 sent err:0x4008[0m
+[0;32mI (223122) mesh_main: [ML-TX] chunk 319/501 sent err:0x4008[0m
+[0;32mI (223132) mesh_main: [ML-TX] chunk 320/501 sent err:0x4008[0m
+[0;32mI (223142) mesh_main: [ML-TX] chunk 321/501 sent err:0x4008[0m
+[0;32mI (223152) mesh_main: [ML-TX] chunk 322/501 sent err:0x4008[0m
+[0;32mI (223162) mesh_main: [ML-TX] chunk 323/501 sent err:0x4008[0m
+[0;32mI (223172) mesh_main: [ML-TX] chunk 324/501 sent err:0x4008[0m
+[0;32mI (223182) mesh_main: [ML-TX] chunk 325/501 sent err:0x4008[0m
+[0;32mI (223192) mesh_main: [ML-TX] chunk 326/501 sent err:0x4008[0m
+[0;32mI (223202) mesh_main: [ML-TX] chunk 327/501 sent err:0x4008[0m
+[0;32mI (223212) mesh_main: [ML-TX] chunk 328/501 sent err:0x4008[0m
+[0;32mI (223222) mesh_main: [ML-TX] chunk 329/501 sent err:0x4008[0m
+[0;32mI (223232) mesh_main: [ML-TX] chunk 330/501 sent err:0x4008[0m
+[0;32mI (223242) mesh_main: [ML-TX] chunk 331/501 sent err:0x4008[0m
+[0;32mI (223252) mesh_main: [ML-TX] chunk 332/501 sent err:0x4008[0m
+[0;32mI (223262) mesh_main: [ML-TX] chunk 333/501 sent err:0x4008[0m
+[0;32mI (223272) mesh_main: [ML-TX] chunk 334/501 sent err:0x4008[0m
+[0;32mI (223282) mesh_main: [ML-TX] chunk 335/501 sent err:0x4008[0m
+[0;32mI (223292) mesh_main: [ML-TX] chunk 336/501 sent err:0x4008[0m
+[0;32mI (223302) mesh_main: [ML-TX] chunk 337/501 sent err:0x4008[0m
+[0;32mI (223312) mesh_main: [ML-TX] chunk 338/501 sent err:0x4008[0m
+[0;32mI (223322) mesh_main: [ML-TX] chunk 339/501 sent err:0x4008[0m
+[0;32mI (223332) mesh_main: [ML-TX] chunk 340/501 sent err:0x4008[0m
+[0;32mI (223342) mesh_main: [ML-TX] chunk 341/501 sent err:0x4008[0m
+[0;32mI (223352) mesh_main: [ML-TX] chunk 342/501 sent err:0x4008[0m
+[0;32mI (223362) mesh_main: [ML-TX] chunk 343/501 sent err:0x4008[0m
+[0;32mI (223372) mesh_main: [ML-TX] chunk 344/501 sent err:0x4008[0m
+[0;32mI (223382) mesh_main: [ML-TX] chunk 345/501 sent err:0x4008[0m
+[0;32mI (223392) mesh_main: [ML-TX] chunk 346/501 sent err:0x4008[0m
+[0;32mI (223402) mesh_main: [ML-TX] chunk 347/501 sent err:0x4008[0m
+[0;32mI (223412) mesh_main: [ML-TX] chunk 348/501 sent err:0x4008[0m
+[0;32mI (223422) mesh_main: [ML-TX] chunk 349/501 sent err:0x4008[0m
+[0;32mI (223432) mesh_main: [ML-TX] chunk 350/501 sent err:0x4008[0m
+[0;32mI (223442) mesh_main: [ML-TX] chunk 351/501 sent err:0x4008[0m
+[0;32mI (223452) mesh_main: [ML-TX] chunk 352/501 sent err:0x4008[0m
+[0;32mI (223462) mesh_main: [ML-TX] chunk 353/501 sent err:0x4008[0m
+[0;32mI (223472) mesh_main: [ML-TX] chunk 354/501 sent err:0x4008[0m
+[0;32mI (223482) mesh_main: [ML-TX] chunk 355/501 sent err:0x4008[0m
+[0;32mI (223492) mesh_main: [ML-TX] chunk 356/501 sent err:0x4008[0m
+[0;32mI (223502) mesh_main: [ML-TX] chunk 357/501 sent err:0x4008[0m
+[0;32mI (223512) mesh_main: [ML-TX] chunk 358/501 sent err:0x4008[0m
+[0;32mI (223522) mesh_main: [ML-TX] chunk 359/501 sent err:0x4008[0m
+[0;32mI (223532) mesh_main: [ML-TX] chunk 360/501 sent err:0x4008[0m
+[0;32mI (223542) mesh_main: [ML-TX] chunk 361/501 sent err:0x4008[0m
+[0;32mI (223552) mesh_main: [ML-TX] chunk 362/501 sent err:0x4008[0m
+[0;32mI (223562) mesh_main: [ML-TX] chunk 363/501 sent err:0x4008[0m
+[0;32mI (223572) mesh_main: [ML-TX] chunk 364/501 sent err:0x4008[0m
+[0;32mI (223582) mesh_main: [ML-TX] chunk 365/501 sent err:0x4008[0m
+[0;32mI (223592) mesh_main: [ML-TX] chunk 366/501 sent err:0x4008[0m
+[0;32mI (223602) mesh_main: [ML-TX] chunk 367/501 sent err:0x4008[0m
+[0;32mI (223612) mesh_main: [ML-TX] chunk 368/501 sent err:0x4008[0m
+[0;32mI (223622) mesh_main: [ML-TX] chunk 369/501 sent err:0x4008[0m
+[0;32mI (223632) mesh_main: [ML-TX] chunk 370/501 sent err:0x4008[0m
+[0;32mI (223642) mesh_main: [ML-TX] chunk 371/501 sent err:0x4008[0m
+[0;32mI (223652) mesh_main: [ML-TX] chunk 372/501 sent err:0x4008[0m
+[0;32mI (223662) mesh_main: [ML-TX] chunk 373/501 sent err:0x4008[0m
+[0;32mI (223672) mesh_main: [ML-TX] chunk 374/501 sent err:0x4008[0m
+[0;32mI (223682) mesh_main: [ML-TX] chunk 375/501 sent err:0x4008[0m
+[0;32mI (223692) mesh_main: [ML-TX] chunk 376/501 sent err:0x4008[0m
+[0;32mI (223702) mesh_main: [ML-TX] chunk 377/501 sent err:0x4008[0m
+[0;32mI (223712) mesh_main: [ML-TX] chunk 378/501 sent err:0x4008[0m
+[0;32mI (223722) mesh_main: [ML-TX] chunk 379/501 sent err:0x4008[0m
+[0;32mI (223732) mesh_main: [ML-TX] chunk 380/501 sent err:0x4008[0m
+[0;32mI (223742) mesh_main: [ML-TX] chunk 381/501 sent err:0x4008[0m
+[0;32mI (223752) mesh_main: [ML-TX] chunk 382/501 sent err:0x4008[0m
+[0;32mI (223762) mesh_main: [ML-TX] chunk 383/501 sent err:0x4008[0m
+[0;32mI (223772) mesh_main: [ML-TX] chunk 384/501 sent err:0x4008[0m
+[0;32mI (223782) mesh_main: [ML-TX] chunk 385/501 sent err:0x4008[0m
+[0;32mI (223792) mesh_main: [ML-TX] chunk 386/501 sent err:0x4008[0m
+[0;32mI (223802) mesh_main: [ML-TX] chunk 387/501 sent err:0x4008[0m
+[0;32mI (223812) mesh_main: [ML-TX] chunk 388/501 sent err:0x4008[0m
+[0;32mI (223822) mesh_main: [ML-TX] chunk 389/501 sent err:0x4008[0m
+[0;32mI (223832) mesh_main: [ML-TX] chunk 390/501 sent err:0x4008[0m
+[0;32mI (223842) mesh_main: [ML-TX] chunk 391/501 sent err:0x4008[0m
+[0;32mI (223852) mesh_main: [ML-TX] chunk 392/501 sent err:0x4008[0m
+[0;32mI (223862) mesh_main: [ML-TX] chunk 393/501 sent err:0x4008[0m
+[0;32mI (223872) mesh_main: [ML-TX] chunk 394/501 sent err:0x4008[0m
+[0;32mI (223882) mesh_main: [ML-TX] chunk 395/501 sent err:0x4008[0m
+[0;32mI (223892) mesh_main: [ML-TX] chunk 396/501 sent err:0x4008[0m
+[0;32mI (223902) mesh_main: [ML-TX] chunk 397/501 sent err:0x4008[0m
+[0;32mI (223912) mesh_main: [ML-TX] chunk 398/501 sent err:0x4008[0m
+[0;32mI (223922) mesh_main: [ML-TX] chunk 399/501 sent err:0x4008[0m
+[0;32mI (223932) mesh_main: [ML-TX] chunk 400/501 sent err:0x4008[0m
+[0;32mI (223942) mesh_main: [ML-TX] chunk 401/501 sent err:0x4008[0m
+[0;32mI (223952) mesh_main: [ML-TX] chunk 402/501 sent err:0x4008[0m
+[0;32mI (223962) mesh_main: [ML-TX] chunk 403/501 sent err:0x4008[0m
+[0;32mI (223972) mesh_main: [ML-TX] chunk 404/501 sent err:0x4008[0m
+[0;32mI (223982) mesh_main: [ML-TX] chunk 405/501 sent err:0x4008[0m
+[0;32mI (223992) mesh_main: [ML-TX] chunk 406/501 sent err:0x4008[0m
+[0;32mI (224002) mesh_main: [ML-TX] chunk 407/501 sent err:0x4008[0m
+[0;32mI (224012) mesh_main: [ML-TX] chunk 408/501 sent err:0x4008[0m
+[0;32mI (224022) mesh_main: [ML-TX] chunk 409/501 sent err:0x4008[0m
+[0;32mI (224022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (224032) mesh_main: [ML-TX] chunk 410/501 sent err:0x4008[0m
+[0;32mI (224042) mesh_main: [ML-TX] chunk 411/501 sent err:0x4008[0m
+[0;32mI (224052) mesh_main: [ML-TX] chunk 412/501 sent err:0x4008[0m
+[0;32mI (224062) mesh_main: [ML-TX] chunk 413/501 sent err:0x4008[0m
+[0;32mI (224072) mesh_main: [ML-TX] chunk 414/501 sent err:0x4008[0m
+[0;32mI (224082) mesh_main: [ML-TX] chunk 415/501 sent err:0x4008[0m
+[0;32mI (224092) mesh_main: [ML-TX] chunk 416/501 sent err:0x4008[0m
+[0;32mI (224102) mesh_main: [ML-TX] chunk 417/501 sent err:0x4008[0m
+[0;32mI (224112) mesh_main: [ML-TX] chunk 418/501 sent err:0x4008[0m
+[0;32mI (224122) mesh_main: [ML-TX] chunk 419/501 sent err:0x4008[0m
+[0;32mI (224132) mesh_main: [ML-TX] chunk 420/501 sent err:0x4008[0m
+[0;32mI (224142) mesh_main: [ML-TX] chunk 421/501 sent err:0x4008[0m
+[0;32mI (224152) mesh_main: [ML-TX] chunk 422/501 sent err:0x4008[0m
+[0;32mI (224162) mesh_main: [ML-TX] chunk 423/501 sent err:0x4008[0m
+[0;32mI (224172) mesh_main: [ML-TX] chunk 424/501 sent err:0x4008[0m
+[0;32mI (224182) mesh_main: [ML-TX] chunk 425/501 sent err:0x4008[0m
+[0;32mI (224192) mesh_main: [ML-TX] chunk 426/501 sent err:0x4008[0m
+[0;32mI (224202) mesh_main: [ML-TX] chunk 427/501 sent err:0x4008[0m
+[0;32mI (224212) mesh_main: [ML-TX] chunk 428/501 sent err:0x4008[0m
+[0;32mI (224222) mesh_main: [ML-TX] chunk 429/501 sent err:0x4008[0m
+[0;32mI (224232) mesh_main: [ML-TX] chunk 430/501 sent err:0x4008[0m
+[0;32mI (224242) mesh_main: [ML-TX] chunk 431/501 sent err:0x4008[0m
+[0;32mI (224252) mesh_main: [ML-TX] chunk 432/501 sent err:0x4008[0m
+[0;32mI (224262) mesh_main: [ML-TX] chunk 433/501 sent err:0x4008[0m
+[0;32mI (224272) mesh_main: [ML-TX] chunk 434/501 sent err:0x4008[0m
+[0;32mI (224282) mesh_main: [ML-TX] chunk 435/501 sent err:0x4008[0m
+[0;32mI (224292) mesh_main: [ML-TX] chunk 436/501 sent err:0x4008[0m
+[0;32mI (224302) mesh_main: [ML-TX] chunk 437/501 sent err:0x4008[0m
+[0;32mI (224312) mesh_main: [ML-TX] chunk 438/501 sent err:0x4008[0m
+[0;32mI (224322) mesh_main: [ML-TX] chunk 439/501 sent err:0x4008[0m
+[0;32mI (224332) mesh_main: [ML-TX] chunk 440/501 sent err:0x4008[0m
+[0;32mI (224342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (224342) mesh_main: [ML-TX] chunk 441/501 sent err:0x4008[0m
+[0;32mI (224352) mesh_main: [ML-TX] chunk 442/501 sent err:0x4008[0m
+[0;32mI (224362) mesh_main: [ML-TX] chunk 443/501 sent err:0x4008[0m
+[0;32mI (224372) mesh_main: [ML-TX] chunk 444/501 sent err:0x4008[0m
+[0;32mI (224382) mesh_main: [ML-TX] chunk 445/501 sent err:0x4008[0m
+[0;32mI (224392) mesh_main: [ML-TX] chunk 446/501 sent err:0x4008[0m
+[0;32mI (224402) mesh_main: [ML-TX] chunk 447/501 sent err:0x4008[0m
+[0;32mI (224412) mesh_main: [ML-TX] chunk 448/501 sent err:0x4008[0m
+[0;32mI (224422) mesh_main: [ML-TX] chunk 449/501 sent err:0x4008[0m
+[0;32mI (224432) mesh_main: [ML-TX] chunk 450/501 sent err:0x4008[0m
+[0;32mI (224442) mesh_main: [ML-TX] chunk 451/501 sent err:0x4008[0m
+[0;32mI (224452) mesh_main: [ML-TX] chunk 452/501 sent err:0x4008[0m
+[0;32mI (224462) mesh_main: [ML-TX] chunk 453/501 sent err:0x4008[0m
+[0;32mI (224472) mesh_main: [ML-TX] chunk 454/501 sent err:0x4008[0m
+[0;32mI (224482) mesh_main: [ML-TX] chunk 455/501 sent err:0x4008[0m
+[0;32mI (224492) mesh_main: [ML-TX] chunk 456/501 sent err:0x4008[0m
+[0;32mI (224502) mesh_main: [ML-TX] chunk 457/501 sent err:0x4008[0m
+[0;32mI (224512) mesh_main: [ML-TX] chunk 458/501 sent err:0x4008[0m
+[0;32mI (224522) mesh_main: [ML-TX] chunk 459/501 sent err:0x4008[0m
+[0;32mI (224532) mesh_main: [ML-TX] chunk 460/501 sent err:0x4008[0m
+[0;32mI (224542) mesh_main: [ML-TX] chunk 461/501 sent err:0x4008[0m
+[0;32mI (224552) mesh_main: [ML-TX] chunk 462/501 sent err:0x4008[0m
+[0;32mI (224562) mesh_main: [ML-TX] chunk 463/501 sent err:0x4008[0m
+[0;32mI (224572) mesh_main: [ML-TX] chunk 464/501 sent err:0x4008[0m
+[0;32mI (224582) mesh_main: [ML-TX] chunk 465/501 sent err:0x4008[0m
+[0;32mI (224592) mesh_main: [ML-TX] chunk 466/501 sent err:0x4008[0m
+[0;32mI (224602) mesh_main: [ML-TX] chunk 467/501 sent err:0x4008[0m
+[0;32mI (224612) mesh_main: [ML-TX] chunk 468/501 sent err:0x4008[0m
+[0;32mI (224622) mesh_main: [ML-TX] chunk 469/501 sent err:0x4008[0m
+[0;32mI (224632) mesh_main: [ML-TX] chunk 470/501 sent err:0x4008[0m
+[0;32mI (224642) mesh_main: [ML-TX] chunk 471/501 sent err:0x4008[0m
+[0;32mI (224652) mesh_main: [ML-TX] chunk 472/501 sent err:0x4008[0m
+[0;32mI (224662) mesh_main: [ML-TX] chunk 473/501 sent err:0x4008[0m
+[0;32mI (224672) mesh_main: [ML-TX] chunk 474/501 sent err:0x4008[0m
+[0;32mI (224682) mesh_main: [ML-TX] chunk 475/501 sent err:0x4008[0m
+[0;32mI (224692) mesh_main: [ML-TX] chunk 476/501 sent err:0x4008[0m
+[0;32mI (224702) mesh_main: [ML-TX] chunk 477/501 sent err:0x4008[0m
+[0;32mI (224712) mesh_main: [ML-TX] chunk 478/501 sent err:0x4008[0m
+[0;32mI (224722) mesh_main: [ML-TX] chunk 479/501 sent err:0x4008[0m
+[0;32mI (224732) mesh_main: [ML-TX] chunk 480/501 sent err:0x4008[0m
+[0;32mI (224742) mesh_main: [ML-TX] chunk 481/501 sent err:0x4008[0m
+[0;32mI (224752) mesh_main: [ML-TX] chunk 482/501 sent err:0x4008[0m
+[0;32mI (224762) mesh_main: [ML-TX] chunk 483/501 sent err:0x4008[0m
+[0;32mI (224772) mesh_main: [ML-TX] chunk 484/501 sent err:0x4008[0m
+[0;32mI (224782) mesh_main: [ML-TX] chunk 485/501 sent err:0x4008[0m
+[0;32mI (224792) mesh_main: [ML-TX] chunk 486/501 sent err:0x4008[0m
+[0;32mI (224802) mesh_main: [ML-TX] chunk 487/501 sent err:0x4008[0m
+[0;32mI (224812) mesh_main: [ML-TX] chunk 488/501 sent err:0x4008[0m
+[0;32mI (224822) mesh_main: [ML-TX] chunk 489/501 sent err:0x4008[0m
+[0;32mI (224832) mesh_main: [ML-TX] chunk 490/501 sent err:0x4008[0m
+[0;32mI (224842) mesh_main: [ML-TX] chunk 491/501 sent err:0x4008[0m
+[0;32mI (224852) mesh_main: [ML-TX] chunk 492/501 sent err:0x4008[0m
+[0;32mI (224862) mesh_main: [ML-TX] chunk 493/501 sent err:0x4008[0m
+[0;32mI (224872) mesh_main: [ML-TX] chunk 494/501 sent err:0x4008[0m
+[0;32mI (224882) mesh_main: [ML-TX] chunk 495/501 sent err:0x4008[0m
+[0;32mI (224892) mesh_main: [ML-TX] chunk 496/501 sent err:0x4008[0m
+[0;32mI (224902) mesh_main: [ML-TX] chunk 497/501 sent err:0x4008[0m
+[0;32mI (224912) mesh_main: [ML-TX] chunk 498/501 sent err:0x4008[0m
+[0;32mI (224922) mesh_main: [ML-TX] chunk 499/501 sent err:0x4008[0m
+[0;32mI (224932) mesh_main: [ML-TX] chunk 500/501 sent err:0x4008[0m
+[0;32mI (224942) mesh_main: [ML-TX] chunk 501/501 sent err:0x4008[0m
+[0;32mI (225022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (226022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (226342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (227022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (228022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (228342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (229022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (230032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (230342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (231032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (232032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (232342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (233032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (234032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (234342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (235032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (236032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (236342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (237022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (238022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (238342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (239022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (240032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (240342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (241032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (242032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (242342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (243022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (244022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (244342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (245032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (246032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (246342) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (247032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (248032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (248352) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (249022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (250032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (250352) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (251042) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (252032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (252362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (253022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (254022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (254362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (254742) mesh: 5127<assoc>parent layer:1, channel:6, rssi:-24, assoc:1, rssi threshold<-78,-82,-85>[0m
+[0;32mI (255022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (256022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (256362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (257032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (258032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (258362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (259032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (260032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (260362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (261032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (262032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (262362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (263032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (264022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (264362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (265022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (266022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (266362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (267022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (268022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (268362) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (269022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (270032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (270372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (271032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (272032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (272372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (273032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (274032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (274372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (275032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (276032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (276372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (277032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (278032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (278372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (279022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (280022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (280372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (281022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (282022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (282372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (283032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (284032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (284372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (285022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (286022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (286372) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (287032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (288032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (288382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (289032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (290032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (290382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (291032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (292022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (292382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (293032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (294022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (294382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (295022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (296022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (296382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (297032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (298022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (298382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (299022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (300022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (300382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (301032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (302032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (302382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (303022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (304032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (304382) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (305032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (306022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (306392) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (307022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (308022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (308392) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (309022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (310022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (310392) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (311022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (312022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (312392) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (313022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (314022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (314402) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (315032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (316032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (316402) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (317032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (318032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (318402) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (319032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (320032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (320402) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (321032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (322032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (322402) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (323022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (324022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (324412) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (325022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (326022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (326412) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (327032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (328022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (328412) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (329022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (330022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (330412) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (331032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (332032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (332422) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (333022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (334032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (334422) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (335032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (336022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (336422) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (337022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (338022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (338422) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (339022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (340022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (340422) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (341022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (342022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (342432) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (343022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (344022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (344432) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (345032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (346022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (346432) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (347032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (348032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (348432) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (349032) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (350022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (350432) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
+[0;32mI (351022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (352022) mesh_main: [MAV-RX] heartbeat armed:0[0m
+[0;32mI (352442) mesh_main: [DRONE-TX] heartbeat drone_id:68 (no MAVLink yet)[0m
