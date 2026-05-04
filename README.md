@@ -7,7 +7,7 @@ Readme file
 > GND_station
 Contains user interface code and serial handler, call main.py to start a session
 
-> mesh_code / drone
+/> mesh_code / drone
 Contains drone networking ESP32 code + CMakeLists.txt to run the IDF compiler
 
 > mesh_code / ground 
@@ -26,6 +26,7 @@ Contains the data processing and model training code + unconverted forms of the 
 
 ## Model Dataset Pipeline
 Download the 2 datasets here and move them into a desired directory:
+
 https://www.kaggle.com/datasets/nikolasgegenava/sard-search-and-rescue/data
 https://universe.roboflow.com/sar-datasets/heridal-dhyqp/dataset/1/images
 
