@@ -7,7 +7,7 @@ Readme file
 > GND_station
 Contains user interface code and serial handler, call main.py to start a session
 
-/> mesh_code / drone
+#> mesh_code / drone
 Contains drone networking ESP32 code + CMakeLists.txt to run the IDF compiler
 
 > mesh_code / ground 
