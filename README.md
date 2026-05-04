@@ -4,25 +4,26 @@
 README.md
 Readme file
 
-> GND_station
+/GND_station
 Contains user interface code and serial handler, call main.py to start a session
 
-#> mesh_code / drone
+/mesh_code/drone
 Contains drone networking ESP32 code + CMakeLists.txt to run the IDF compiler
 
-> mesh_code / ground 
+/mesh_code/ground 
 Contains ground side networking ESP32 code + CMakeLists.txt to run the IDF compiler
 
-> payload / drone / human_detect
+/payload/drone/human_detect
 Contains ESP32-S3 Camera code, with the main file being human_detect.ino + the model hex file, also tflite_convert.py to convert the model into hex and camera visualization code
 
-> payload / drone / tinyML
+/payload/drone/tinyML
 Contains the data processing and model training code + unconverted forms of the model file
+
+/payload/drone/mavlink
+contains firmware librairies for mavlink which is used to interface with the Pixhawk flight controller
 
 
 ## ESPIDF Setup
-
-
 
 ## Model Dataset Pipeline
 Download the 2 datasets here and move them into a desired directory:
