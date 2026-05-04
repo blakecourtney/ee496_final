@@ -166,8 +166,7 @@ model.compile(loss='binary_crossentropy', optimizer=optimizer, metrics=['accurac
 # quantize model
 model = tf.keras.models.load_model('drone_model_v2.h5')
 
-# 2. Create a Representative Dataset Generator
-# This pulls a small sample (e.g., 100 images) from your training set
+# create a Representative Dataset Generator
 def representative_data_gen():
     it = iter(train_set)
     
@@ -184,18 +183,18 @@ def representative_data_gen():
             img, _ = next(it)
             yield [img[0:1].astype(np.float32)]
 
-# 3. Setup the TFLite Converter
+# setup the TFLite Converter
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
 converter.representative_dataset = representative_data_gen
 
-# 4. Force Full Integer Quantization
-# This ensures NO floats are left in the model, making it 100% compatible with ESP-NN
+# force Full Integer Quantization
+# no floats
 converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
 converter.inference_input_type = tf.int8  # Camera input will be INT8
 converter.inference_output_type = tf.int8 # Model output will be INT8
 
-# 5. Convert and Save
+# convert and Save
 tflite_quant_model = converter.convert()
 
 with open('drone_model_quant.tflite', 'wb') as f:
