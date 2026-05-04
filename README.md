@@ -24,22 +24,22 @@ contains firmware librairies for mavlink which is used to interface with the Pix
 
 
 ## ESPIDF Setup
-LINUX:
+### LINUX:
 Configuring a PC to Flash Code(linux):
-# install dependencies
+### install dependencies
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 
-# clone ESP-IDF
+### clone ESP-IDF
 mkdir -p ~/esp
 cd ~/esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 cd esp-idf
 git checkout v5.5.2  # match your current version
 
-# install tools
+### install tools
 ./install.sh esp32
 
-# add to shell
+### add to shell
 echo '. ~/esp/esp-idf/export.sh' >> ~/.bashrc
 source ~/.bashrc
 
@@ -47,24 +47,24 @@ sudo usermod -a -G dialout $USER
 
 . ~/esp/esp-idf/export.sh
 
-MAC:
-# install Homebrew if not already installed
+### MAC:
+### install Homebrew if not already installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install dependencies
+### install dependencies
 brew install cmake ninja dfu-util python3
 
-# clone ESP-IDF
+### clone ESP-IDF
 mkdir -p ~/esp
 cd ~/esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 cd esp-idf
 git checkout v5.5.2  # match your current version
 
-# install tools
+### install tools
 ./install.sh esp32
 
-# add to shell
+### add to shell
 echo '. ~/esp/esp-idf/export.sh' >> ~/.zshrc
 source ~/.zshrc
 
